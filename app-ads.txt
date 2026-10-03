@@ -1,2 +1,4 @@
 # AdMob に登録した後、AdMob の画面に表示される1行をこの下に貼り付けてください。
 # 例）google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+google.com, pub-1105812498519245, DIRECT, f08c47fec0942fa0
