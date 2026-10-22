@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For publishers | Sukidane | Mayudama Factory</title>
+<style>
+  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#F26B5B; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.7; }
+  main { max-width:720px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:24px; margin:0 0 8px; }
+  .meta { color:var(--quiet); font-size:14px; margin:0 0 32px; }
+  h2 { font-size:18px; margin:36px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+  ul { padding-left:1.4em; }
+  a { color:var(--accent); }
+  .box { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 20px; }
+  footer { margin-top:48px; color:var(--quiet); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sukidane — for publishers</h1>
+  <p class="meta">About the RSS reader app &ldquo;Sukidane&rdquo; / Mayudama Factory ／ <a href="../../media/">日本語</a></p>
+
+  <p>Sukidane is an RSS reader that runs on the reader's own device. There is no Sukidane server: the app fetches feeds directly from the reader's device and keeps what it saves on that device (and, if the reader turns on sync, in the reader's own Google Drive).</p>
+
+  <h2>What the app shows</h2>
+  <ul>
+    <li>The headline, a short summary and a thumbnail image from your public RSS/Atom feed, always shown with your site name and site icon. Tapping an item opens the original article on your site.</li>
+    <li>We never display or store the full text of an article. If a feed contains full text (for example in <code>content:encoded</code>), it is used only to find a lead image; it is not shown, saved or used to build a summary.</li>
+    <li>We do not rewrite headlines or summaries. Summaries may be shortened to a fixed length, and HTML is removed. If you would prefer that we not show thumbnails from your site, or not shorten your summaries, just let us know.</li>
+    <li>No advertising is placed on top of your article pages. Ads appear only as separate native ad rows inside the article list.</li>
+  </ul>
+
+  <h2>How often we fetch</h2>
+  <ul>
+    <li>Automatic refresh runs at most once per hour per feed. If your feed or site asks for a longer interval, we follow it.</li>
+    <li>The app identifies itself with a User-Agent of the form below (the version is the app version). The page it points to is the Japanese page, which links to this English page.</li>
+  </ul>
+  <p class="box"><code>Sukidane/1.0.0 (+https://mayudama.app/sukidane/media/)</code></p>
+
+  <h2>Ask to be listed, or removed</h2>
+  <div class="box">
+    <p style="margin:0">To be added to the app's built-in catalog, or to have your feed removed from it, write to us with your site name and feed URL. Removal requests are applied in the next app update (usually within 14 days). After that, your feed no longer appears in the app's recommendations.</p>
+    <p style="margin:12px 0 0"><strong>Contact:</strong> sukidane-support@mayudama.app<br>
+    Please include the site name in the subject line.</p>
+  </div>
+  <p>Readers who already follow your feed, or who add it themselves by URL, will continue to receive it; that is the reader's own choice, as with any RSS reader.</p>
+
+  <footer><a href="../../../">Mayudama Factory home</a> / <a href="../../privacy/">Sukidane Privacy Policy (Japanese)</a> / <a href="../../media/">日本語のページ</a></footer>
+</main>
+</body>
+</html>
