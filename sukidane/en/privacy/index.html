@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sukidane Privacy Policy | Mayudama Factory</title>
+<style>
+  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#F26B5B; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.7; }
+  main { max-width:720px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:24px; margin:0 0 8px; }
+  .meta { color:var(--quiet); font-size:14px; margin:0 0 32px; }
+  h2 { font-size:18px; margin:36px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+  ul { padding-left:1.4em; }
+  a { color:var(--accent); }
+  footer { margin-top:48px; color:var(--quiet); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sukidane Privacy Policy</h1>
+  <p class="meta">Effective: October 3, 2026 / Last updated: October 23, 2026 / Provider: Mayudama Factory / <a href="../../privacy/">日本語</a></p>
+  <p>Mayudama Factory (&ldquo;we&rdquo;, &ldquo;us&rdquo;) provides &ldquo;Sukidane&rdquo; (the &ldquo;App&rdquo;), an RSS reader for Android, iOS, and Mac. This policy explains how information is handled in the App.</p>
+  <p>The Mac version has no ads and no Google Drive sync (Sections 4 and 5 describe the Android and iOS versions). This page is a translation of the Japanese policy, with the addition of Section 9 for U.S. residents. If the two differ, the Japanese version applies, except that Section 9 applies as written to U.S. residents.</p>
+
+  <h2>1. Information we receive</h2>
+  <p>The App has no server operated by us. We do not receive your information and we have no access to it. As described in Sections 2 to 4, information on your device is either stored on the device or sent directly from the device to a party you choose (a site you follow, or your own Google Drive).</p>
+
+  <h2>2. Fetching and reading articles</h2>
+  <p>The App fetches the following directly from each site you follow, from your device: update information (RSS/Atom feeds), article images, the small icon shown next to a site name (favicon), and HTML used to discover feeds. HTML is not stored. No external service is used to fetch icons.</p>
+  <p>As with ordinary web browsing, the operator of each site receives connection information such as your IP address. Each site handles that information under its own policy.</p>
+  <p>When you tap an article, the original page opens in the in-app browser (a Chrome Custom Tab on Android, a Safari view on iOS) or in an external browser. Browsing history and cookies are handled by the browser.</p>
+
+  <h2>3. Information stored on your device</h2>
+  <p>The App stores the following on your device.</p>
+  <ul>
+    <li>The sites and categories you follow, and recommended sites you have removed from the recommendation list</li>
+    <li>Titles, summaries, image URLs, and publication times of fetched articles (not deleted automatically by default; in Settings you can delete articles older than 90 days, 180 days, or 1 year automatically; bookmarked articles are kept)</li>
+    <li>Read records and bookmarks</li>
+    <li>Records of articles you opened (reading history): for articles you tapped to open in the App, the URL, title, summary, site name, the time opened, and where it was opened (Home, preview, bookmarks, search, or For You). The article body is not stored. Entries older than 180 days are deleted automatically. In Settings &gt; Reading history you can delete entries one by one or all at once</li>
+    <li>Keyword filters and settings such as display and refresh options</li>
+    <li>Site icons</li>
+    <li>If you turn on sync, information used to renew Google authorization quietly (Android: the email address of the Google account you signed in with. iOS: Google authorization information, a refresh token. See Section 4)</li>
+    <li>The advertising SDK and consent management store the advertising ID, your consent status, and similar data on the device</li>
+  </ul>
+  <p><strong>The App does not store article bodies.</strong> Uninstalling the App deletes this information from your device. It is excluded from device backups and from automatic transfer to a new device.</p>
+
+  <h2>3-2. How recommendations are chosen (For You)</h2>
+  <p>&ldquo;For You&rdquo; analyzes the titles and summaries of articles you have opened, on your device (a language model bundled with the App converts text into numbers and computes similarity), and chooses recommendations from unread articles.</p>
+  <ul>
+    <li>This analysis happens only on your device. Your reading history and the analysis results are not sent to us or to any third party (no external AI service is used).</li>
+    <li>Reading history is used only to choose articles for For You. It is not used for ad delivery or any other purpose.</li>
+    <li>The numeric values used in the analysis (vectors describing articles) are stored only on your device and are not saved to Google Drive.</li>
+  </ul>
+
+  <h2>4. Sync with Google Drive (optional)</h2>
+  <p>Only if you sign in with a Google account and turn on sync, the App saves the following to the &ldquo;app data folder&rdquo; (appDataFolder) of your own Google Drive and syncs it with other devices signed in to the same account.</p>
+  <ul>
+    <li>Followed sites and categories (site names, feed URLs, order, display names, hidden state, display format, mute state including &ldquo;also hide from For You&rdquo;, and the position of For You)</li>
+    <li>Recommended sites you have removed</li>
+    <li>Keyword filters (keywords, type, scope, on/off)</li>
+    <li>Bookmarks (article URL, title, summary, publisher name, image URL, publication time, time saved, and archived state)</li>
+    <li>Read records (individual reads and &ldquo;mark all as read&rdquo;; about the last 90 days; shortened to 60 or 30 days if the file grows large)</li>
+    <li>Reading history (article URL, title, summary, site name, time opened, and where it was opened). The device keeps 180 days, but only about the last 90 days are saved to Drive (the same period as read records; shortened if the file grows large). This lets other devices choose For You articles from the same history</li>
+    <li>Some settings included in sync (article display format, mark as read on scroll, confirmation for &ldquo;mark all as read&rdquo;, and the action when removing a bookmark)</li>
+  </ul>
+  <p>The following is not saved to Drive: fetched articles themselves (titles, summaries, images; except bookmarked articles), site icons, For You calculation results (the record of recommended articles and the numeric vectors), notification settings (including &ldquo;always notify&rdquo; sites), per-device settings such as auto refresh, theme, text size, and swipe actions, and ad or purchase status.</p>
+  <p>We commit to the following.</p>
+  <ul>
+    <li>The only permission used is access to the App&rsquo;s own data folder (drive.appdata). The App does not read or change any other file in your Drive. The app data folder is not shown in the Drive interface.</li>
+    <li>Sync data moves only between your device and your own Google Drive. We do not receive it or access it. The App calls Google&rsquo;s authentication APIs to verify and revoke the sign-in. To renew the sync authorization without asking you to sign in each time, the Android version stores the email address of the Google account you signed in with on the device only (it is not shown on screen and is excluded from backups). The iOS version stores Google authorization information (a refresh token) in the device&rsquo;s secure storage (Keychain), on this device only (it does not move to other devices). These are not sent to us and are deleted by &ldquo;Stop syncing&rdquo;, signing out, or deleting the account. On iOS, if a Keychain item remains after the App is deleted, it is removed on the first launch after reinstalling. No other account information, such as your name, is used.</li>
+    <li>How Google Drive handles data is governed by Google&rsquo;s Terms of Service and Privacy Policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</li>
+    <li>You can stop at any time from Settings &gt; Sync &gt; &ldquo;Stop syncing&rdquo;. Data on your device is not deleted. Stopping revokes the App&rsquo;s access. If you also choose &ldquo;Also delete the data on Drive&rdquo;, the sync data on Drive is deleted. If you do not, your other devices will need to sign in again at their next sync.</li>
+    <li>You can also delete or revoke access from your Google account&rsquo;s &ldquo;Third-party access&rdquo; or from Drive&rsquo;s &ldquo;Manage apps&rdquo;.</li>
+  </ul>
+  <p>The App&rsquo;s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>5. Advertising</h2>
+  <p>The App shows ads from the ad service Google AdMob (Google LLC) in the middle of article lists. Ads are labeled &ldquo;Ad&rdquo;. No ad is placed over the article page (the in-app browser).</p>
+  <ul>
+    <li>To deliver ads, measure results, and prevent fraud, the advertising SDK collects the advertising ID (the Android advertising ID or the iOS identifier for advertisers, IDFA), device information (model, OS version, language, and so on), IP address (which may be used to estimate approximate location), how you interact with ads (views, taps, and so on), and information about the operation of the SDK and the App, and sends it to Google. This information does not reach our servers (we have none).</li>
+    <li>How this information is handled is governed by <a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a>. You can see how Google uses data for ads <a href="https://policies.google.com/technologies/partner-sites">here</a>.</li>
+    <li>On Android, you can delete your advertising ID or opt out of personalized ads in your device settings (Settings &gt; Google &gt; Ads).</li>
+    <li>On iOS, the App may ask for permission to track you at launch, using Apple&rsquo;s App Tracking Transparency. Only if you allow it does the advertising SDK use the identifier for advertisers (IDFA) to personalize ads and measure results. If you do not allow it, ads are still shown, but the identifier is not used and ads are not personalized. You can change this at any time in the device&rsquo;s Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+    <li>For users in the European Economic Area (EEA), the United Kingdom, and Switzerland, a consent prompt from Google&rsquo;s consent management platform (UMP) is shown before ads are loaded. You can review your choices in Settings &gt; &ldquo;Privacy settings (ads)&rdquo;. For U.S. residents, see Section 9.</li>
+    <li>Data saved by sync (Section 4) is not used to deliver ads.</li>
+  </ul>
+
+  <h2>6. Notifications and automatic refresh</h2>
+  <p>If you use new-article notifications, the App asks for the device&rsquo;s notification permission. Notification content is created on your device and is not sent to us.</p>
+  <p>If you set up automatic refresh (fetching in the background), the Android version uses the permission to receive the device&rsquo;s restart notification so that it can resume the fetch schedule after a restart. The iOS version fetches using the device&rsquo;s background refresh feature, which you can turn off in Settings &gt; General &gt; Background App Refresh.</p>
+
+  <h2>7. Information we receive when you contact us</h2>
+  <p>If you send an email from the App&rsquo;s &ldquo;Contact&rdquo; feature, we receive your email address, the message, and information filled in automatically such as the App and OS versions and the device model. We use it only to reply and to investigate problems, and we do not provide it to third parties.</p>
+
+  <h2>8. Disclosure to third parties</h2>
+  <p>We do not provide your information to third parties except as required by law. As described in Section 5, however, the advertising SDK (Google AdMob) sends some information to Google in order to deliver ads.</p>
+
+  <h2>9. Information for U.S. residents (CCPA/CPRA and other U.S. state privacy laws)</h2>
+  <p>This section applies to residents of U.S. states with consumer privacy laws, such as California (the California Consumer Privacy Act as amended by the California Privacy Rights Act, &ldquo;CCPA/CPRA&rdquo;), and supplements the rest of this policy.</p>
+  <ul>
+    <li><strong>We do not sell personal information.</strong> We do not operate servers for the App and do not receive your personal information, so we have nothing to sell. We do not use your information for any purpose other than those described in this policy.</li>
+    <li><strong>Advertising (&ldquo;sharing&rdquo; for cross-context behavioral advertising).</strong> As described in Section 5, the Google AdMob advertising SDK in the Android and iOS versions may collect identifiers (such as the advertising ID), device information, IP address, and ad interactions, and send them to Google. Under some U.S. state laws this may be considered &ldquo;sharing&rdquo; for targeted advertising or a &ldquo;sale&rdquo;. <strong>You can decline this.</strong> Where the law requires it, the App shows an option in Settings &gt; &ldquo;Privacy settings (ads)&rdquo; (&ldquo;Do Not Sell or Share My Personal Information&rdquo;). Through it you can opt out of the sharing of your information for ads and review your choice at any time. You can also use your device&rsquo;s own controls: delete the advertising ID or opt out of personalized ads on Android (Settings &gt; Google &gt; Ads), or decline tracking on iOS (Settings &gt; Privacy &amp; Security &gt; Tracking). The Mac version has no ads.</li>
+    <li><strong>Sensitive personal information.</strong> We do not collect sensitive personal information.</li>
+    <li><strong>Your rights.</strong> Depending on where you live, you may have the right to know what personal information is collected, used, or disclosed about you, to request deletion or correction, to opt out of sale or sharing, and not to be treated differently for exercising these rights. We do not receive or store your personal information on our servers, so the information in the App is held on your own device (and, if you turn on sync, in your own Google Drive); you can delete it as described in Section 10. For information handled by Google for ads, please use the controls above or Google&rsquo;s own tools. You may also contact us to make a request or ask a question, including through an authorized agent. We will respond within the time required by law.</li>
+    <li><strong>Children.</strong> The App is not directed to children under 13, and we do not knowingly collect personal information from children under 13. Please see Section 10 and the contact below if you believe a child has provided information.</li>
+    <li><strong>Contact.</strong> Mayudama Factory, <a href="mailto:sukidane-support@mayudama.app">sukidane-support@mayudama.app</a>.</li>
+  </ul>
+
+  <h2>10. Deleting information</h2>
+  <ul>
+    <li>Information on your device: deleted when you uninstall the App. You can also delete articles from Settings (manual article deletion).</li>
+    <li>Reading history: in Settings &gt; &ldquo;Reading history&rdquo; you can delete entries one by one or all at once. Deleted articles are also removed from how For You chooses. If sync is on, the deletion is reflected on your other devices through sync.</li>
+    <li>Sync data on Google Drive: as described in Section 4, delete it with &ldquo;Stop syncing&rdquo; &gt; &ldquo;Also delete the data on Drive&rdquo; in the App, or from your Google account settings.</li>
+    <li>The App has no user accounts managed by us. For any other deletion request, please email us at the address below.</li>
+  </ul>
+
+  <h2>11. Changes to this policy</h2>
+  <p>We may change this policy as needed. When we do, we will publish the change on this page and update the date.</p>
+  <ul>
+    <li>October 23, 2026: Published this English version, translated from the Japanese policy, with a section for U.S. residents (Section 9). It reflects the same content as the Japanese policy updated on the same day: the iOS advertising identifier and tracking permission, the in-app browser, background refresh, the list of synced items, the information stored on the device to renew the sync authorization (Android: email address; iOS: Keychain authorization information), and the retention periods of reading history (device: 180 days; Drive: about 90 days).</li>
+  </ul>
+
+  <h2>12. Contact</h2>
+  <p>Mayudama Factory<br>Email: <a href="mailto:sukidane-support@mayudama.app">sukidane-support@mayudama.app</a></p>
+
+  <footer><a href="../../../">Mayudama Factory home</a> / <a href="../../privacy/">日本語のプライバシーポリシー</a> / <a href="../media/">For publishers</a></footer>
+</main>
+</body>
+</html>
