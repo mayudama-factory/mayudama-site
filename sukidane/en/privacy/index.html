@@ -38,7 +38,7 @@
     <li>The sites and categories you follow, and recommended sites you have removed from the recommendation list</li>
     <li>Titles, summaries, image URLs, and publication times of fetched articles (not deleted automatically by default; in Settings you can delete articles older than 90 days, 180 days, or 1 year automatically; bookmarked articles are kept)</li>
     <li>Read records and bookmarks</li>
-    <li>Records of articles you opened (reading history): for articles you tapped to open in the App, the URL, title, summary, site name, the time opened, and where it was opened (Home, preview, bookmarks, search, or For You). The article body is not stored. Entries older than 180 days are deleted automatically. In Settings &gt; Reading history you can delete entries one by one or all at once</li>
+    <li>Records of articles you opened (reading history): for articles you tapped to open in the App, the URL, title, summary, site name, the time opened, and where it was opened (Home, preview, bookmarks, search, or Picks). The article body is not stored. Entries older than 180 days are deleted automatically. In Settings &gt; Reading history you can delete entries one by one or all at once</li>
     <li>Keyword filters and settings such as display and refresh options</li>
     <li>Site icons</li>
     <li>If you turn on sync, information used to renew Google authorization quietly (Android: the email address of the Google account you signed in with. iOS: Google authorization information, a refresh token. See Section 4)</li>
@@ -46,26 +46,26 @@
   </ul>
   <p><strong>The App does not store article bodies.</strong> Uninstalling the App deletes this information from your device. It is excluded from device backups and from automatic transfer to a new device.</p>
 
-  <h2>3-2. How recommendations are chosen (For You)</h2>
-  <p>&ldquo;For You&rdquo; analyzes the titles and summaries of articles you have opened, on your device (a language model bundled with the App converts text into numbers and computes similarity), and chooses recommendations from unread articles.</p>
+  <h2>3-2. How recommendations are chosen (Picks)</h2>
+  <p>&ldquo;Picks&rdquo; analyzes the titles and summaries of articles you have opened, on your device (a language model bundled with the App converts text into numbers and computes similarity), and chooses recommendations from unread articles.</p>
   <ul>
     <li>This analysis happens only on your device. Your reading history and the analysis results are not sent to us or to any third party (no external AI service is used).</li>
-    <li>Reading history is used only to choose articles for For You. It is not used for ad delivery or any other purpose.</li>
+    <li>Reading history is used only to choose articles for Picks. It is not used for ad delivery or any other purpose.</li>
     <li>The numeric values used in the analysis (vectors describing articles) are stored only on your device and are not saved to Google Drive.</li>
   </ul>
 
   <h2>4. Sync with Google Drive (optional)</h2>
   <p>Only if you sign in with a Google account and turn on sync, the App saves the following to the &ldquo;app data folder&rdquo; (appDataFolder) of your own Google Drive and syncs it with other devices signed in to the same account.</p>
   <ul>
-    <li>Followed sites and categories (site names, feed URLs, order, display names, hidden state, display format, mute state including &ldquo;also hide from For You&rdquo;, and the position of For You)</li>
+    <li>Followed sites and categories (site names, feed URLs, order, display names, hidden state, display format, mute state including &ldquo;also hide from Picks&rdquo;, and the position of Picks)</li>
     <li>Recommended sites you have removed</li>
     <li>Keyword filters (keywords, type, scope, on/off)</li>
     <li>Bookmarks (article URL, title, summary, publisher name, image URL, publication time, time saved, and archived state)</li>
     <li>Read records (individual reads and &ldquo;mark all as read&rdquo;; about the last 90 days; shortened to 60 or 30 days if the file grows large)</li>
-    <li>Reading history (article URL, title, summary, site name, time opened, and where it was opened). The device keeps 180 days, but only about the last 90 days are saved to Drive (the same period as read records; shortened if the file grows large). This lets other devices choose For You articles from the same history</li>
+    <li>Reading history (article URL, title, summary, site name, time opened, and where it was opened). The device keeps 180 days, but only about the last 90 days are saved to Drive (the same period as read records; shortened if the file grows large). This lets other devices choose Picks articles from the same history</li>
     <li>Some settings included in sync (article display format, mark as read on scroll, confirmation for &ldquo;mark all as read&rdquo;, and the action when removing a bookmark)</li>
   </ul>
-  <p>The following is not saved to Drive: fetched articles themselves (titles, summaries, images; except bookmarked articles), site icons, For You calculation results (the record of recommended articles and the numeric vectors), notification settings (including &ldquo;always notify&rdquo; sites), per-device settings such as auto refresh, theme, text size, and swipe actions, and ad or purchase status.</p>
+  <p>The following is not saved to Drive: fetched articles themselves (titles, summaries, images; except bookmarked articles), site icons, Picks calculation results (the record of recommended articles and the numeric vectors), notification settings (including &ldquo;always notify&rdquo; sites), per-device settings such as auto refresh, theme, text size, and swipe actions, and ad or purchase status.</p>
   <p>We commit to the following.</p>
   <ul>
     <li>The only permission used is access to the App&rsquo;s own data folder (drive.appdata). The App does not read or change any other file in your Drive. The app data folder is not shown in the Drive interface.</li>
@@ -111,7 +111,7 @@
   <h2>10. Deleting information</h2>
   <ul>
     <li>Information on your device: deleted when you uninstall the App. You can also delete articles from Settings (manual article deletion).</li>
-    <li>Reading history: in Settings &gt; &ldquo;Reading history&rdquo; you can delete entries one by one or all at once. Deleted articles are also removed from how For You chooses. If sync is on, the deletion is reflected on your other devices through sync.</li>
+    <li>Reading history: in Settings &gt; &ldquo;Reading history&rdquo; you can delete entries one by one or all at once. Deleted articles are also removed from how Picks chooses. If sync is on, the deletion is reflected on your other devices through sync.</li>
     <li>Sync data on Google Drive: as described in Section 4, delete it with &ldquo;Stop syncing&rdquo; &gt; &ldquo;Also delete the data on Drive&rdquo; in the App, or from your Google account settings.</li>
     <li>The App has no user accounts managed by us. For any other deletion request, please email us at the address below.</li>
   </ul>
@@ -119,7 +119,7 @@
   <h2>11. Changes to this policy</h2>
   <p>We may change this policy as needed. When we do, we will publish the change on this page and update the date.</p>
   <ul>
-    <li>October 23, 2026: Published this English version, translated from the Japanese policy, with a section for U.S. residents (Section 9). It reflects the same content as the Japanese policy updated on the same day: the iOS advertising identifier and tracking permission, the in-app browser, background refresh, the list of synced items, the information stored on the device to renew the sync authorization (Android: email address; iOS: Keychain authorization information), and the retention periods of reading history (device: 180 days; Drive: about 90 days).</li>
+    <li>October 23, 2026: The feature previously named &ldquo;For You&rdquo; is now named &ldquo;Picks&rdquo; on screen (the content is unchanged). Published this English version, translated from the Japanese policy, with a section for U.S. residents (Section 9). It reflects the same content as the Japanese policy updated on the same day: the iOS advertising identifier and tracking permission, the in-app browser, background refresh, the list of synced items, the information stored on the device to renew the sync authorization (Android: email address; iOS: Keychain authorization information), and the retention periods of reading history (device: 180 days; Drive: about 90 days).</li>
   </ul>
 
   <h2>12. Contact</h2>
