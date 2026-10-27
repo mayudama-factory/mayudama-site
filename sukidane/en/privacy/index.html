@@ -20,9 +20,9 @@
 <body>
 <main>
   <h1>Sukidane Privacy Policy</h1>
-  <p class="meta">Effective: October 3, 2026 / Last updated: October 27, 2026 / Provider: Mayudama Factory / <a href="../../privacy/">日本語</a></p>
+  <p class="meta">Effective: October 3, 2026 / Last updated: October 28, 2026 / Provider: Mayudama Factory / <a href="../../privacy/">日本語</a></p>
   <p>Mayudama Factory (&ldquo;we&rdquo;, &ldquo;us&rdquo;) provides &ldquo;Sukidane&rdquo; (the &ldquo;App&rdquo;), an RSS reader for Android, iOS, and Mac. This policy explains how information is handled in the App.</p>
-  <p>The Mac version has no ads and no Google Drive sync (Sections 4 and 5 describe the Android and iOS versions). This page is a translation of the Japanese policy, with the addition of Section 9 for U.S. residents. If the two differ, the Japanese version applies, except that Section 9 applies as written to U.S. residents.</p>
+  <p>The Mac version has no ads (Section 5 describes the Android and iOS versions). This page is a translation of the Japanese policy, with the addition of Section 9 for U.S. residents. If the two differ, the Japanese version applies, except that Section 9 applies as written to U.S. residents.</p>
 
   <h2>1. Information we receive</h2>
   <p>The App has no server operated by us. We do not receive your information and we have no access to it. As described in Sections 2 to 4, information on your device is either stored on the device or sent directly from the device to a party you choose (a site you follow, or your own Google Drive).</p>
@@ -30,7 +30,7 @@
   <h2>2. Fetching and reading articles</h2>
   <p>The App fetches the following directly from each site you follow, from your device: update information (RSS/Atom feeds), article images, the small icon shown next to a site name (favicon), and HTML used to discover feeds. HTML is not stored. No external service is used to fetch icons.</p>
   <p>As with ordinary web browsing, the operator of each site receives connection information such as your IP address. Each site handles that information under its own policy.</p>
-  <p>When you tap an article, the original page opens in the in-app browser (a Chrome Custom Tab on Android, a Safari view on iOS) or in an external browser. Browsing history and cookies are handled by the browser.</p>
+  <p>When you tap an article, the original page opens in the in-app browser (a Chrome Custom Tab on Android, a Safari view on iOS, the App&rsquo;s built-in browser on Mac) or in an external browser. On Mac, and on devices with a wide screen (such as tablets), if you choose &ldquo;Open in the preview pane&rdquo;, the page opens in a web view inside the App, in the preview pane on the screen. With a Custom Tab, a Safari view, or an external browser, browsing history and cookies are handled by the browser. With the App&rsquo;s built-in browser and web view, cookies and other website data are stored in the App&rsquo;s storage on your device and are not sent to us. The App does not save the pages you move between for Back and Forward (the record of articles you open is described in Section 3 as reading history).</p>
 
   <h2>3. Information stored on your device</h2>
   <p>The App stores the following on your device.</p>
@@ -41,10 +41,10 @@
     <li>Records of articles you opened (reading history): for articles you tapped to open in the App, the URL, title, summary, site name, the time opened, and where it was opened (Home, preview, bookmarks, search, or Picks). The article body is not stored. Entries older than 180 days are deleted automatically. In Settings &gt; Reading history you can delete entries one by one or all at once</li>
     <li>Keyword filters and settings such as display and refresh options</li>
     <li>Site icons</li>
-    <li>If you turn on sync, information used to renew Google authorization quietly (Android: the email address of the Google account you signed in with. iOS: Google authorization information, a refresh token. See Section 4)</li>
+    <li>If you turn on sync, information used to renew Google authorization quietly (Android: the email address of the Google account you signed in with. iOS and Mac: Google authorization information, a refresh token. See Section 4)</li>
     <li>The advertising SDK and consent management store the advertising ID, your consent status, and similar data on the device</li>
   </ul>
-  <p><strong>The App does not store article bodies.</strong> Uninstalling the App deletes this information from your device. It is excluded from device backups and from automatic transfer to a new device.</p>
+  <p><strong>The App does not store article bodies.</strong> On Android and iOS, uninstalling the App deletes this information from your device, and it is excluded from device backups and from automatic transfer to a new device. On Mac, this information is stored in the App&rsquo;s storage on your Mac and may be included in Mac backups and transfers by Time Machine or Migration Assistant. This storage may also remain on your Mac after the App is deleted.</p>
 
   <h2>3-2. How recommendations are chosen (Picks)</h2>
   <p>&ldquo;Picks&rdquo; analyzes the titles and summaries of articles you have opened, on your device (a language model bundled with the App converts text into numbers and computes similarity), and chooses recommendations from unread articles.</p>
@@ -69,7 +69,7 @@
   <p>We commit to the following.</p>
   <ul>
     <li>The only permission used is access to the App&rsquo;s own data folder (drive.appdata). The App does not read or change any other file in your Drive. The app data folder is not shown in the Drive interface.</li>
-    <li>Sync data moves only between your device and your own Google Drive. We do not receive it or access it. The App calls Google&rsquo;s authentication APIs to verify and revoke the sign-in. To renew the sync authorization without asking you to sign in each time, the Android version stores the email address of the Google account you signed in with on the device only (it is not shown on screen and is excluded from backups). The iOS version stores Google authorization information (a refresh token) in the device&rsquo;s secure storage (Keychain), on this device only (it does not move to other devices). These are not sent to us and are deleted by &ldquo;Stop syncing&rdquo;, signing out, or deleting the account. On iOS, if a Keychain item remains after the App is deleted, it is removed on the first launch after reinstalling. No other account information, such as your name, is used.</li>
+    <li>Sync data moves only between your device and your own Google Drive. We do not receive it or access it. The App calls Google&rsquo;s authentication APIs to verify and revoke the sign-in. To renew the sync authorization without asking you to sign in each time, the Android version stores the email address of the Google account you signed in with on the device only (it is not shown on screen and is excluded from backups). The iOS and Mac versions store Google authorization information (a refresh token) in the device&rsquo;s secure storage (Keychain), on this device only (it does not move to other devices). These are not sent to us and are deleted by &ldquo;Stop syncing&rdquo;, signing out, or deleting the account. On iOS and Mac, if a refresh-token item saved by the App remains in the Keychain after the App is deleted, it is removed on the first launch after reinstalling (on Mac, if the App&rsquo;s data remained on the device, the items for the accounts used in that data are kept). The information that Google&rsquo;s sign-in system keeps in the Keychain for the last signed-in account is replaced at the next sign-in and removed when you sign out. No other account information, such as your name, is used.</li>
     <li>How Google Drive handles data is governed by Google&rsquo;s Terms of Service and Privacy Policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</li>
     <li>You can stop at any time from Settings &gt; &ldquo;Accounts &amp; sync&rdquo; &gt; &ldquo;Stop syncing&rdquo;. Data on your device is not deleted. Stopping revokes the App&rsquo;s access. If you also choose &ldquo;Also delete the data on Drive&rdquo;, the sync data on Drive is deleted. If you do not, your other devices will need to sign in again at their next sync.</li>
     <li>You can also delete or revoke access from your Google account&rsquo;s &ldquo;Third-party access&rdquo; or from Drive&rsquo;s &ldquo;Manage apps&rdquo;.</li>
@@ -110,7 +110,7 @@
 
   <h2>10. Deleting information</h2>
   <ul>
-    <li>Information on your device: deleted when you uninstall the App. You can also delete articles from Settings (manual article deletion).</li>
+    <li>Information on your device: deleted when you uninstall the App (on Mac, the App&rsquo;s data may remain on your Mac after the App is deleted). You can also delete articles from Settings (manual article deletion).</li>
     <li>Reading history: in Settings &gt; &ldquo;Reading history&rdquo; you can delete entries one by one or all at once. Deleted articles are also removed from how Picks chooses. If sync is on, the deletion is reflected on your other devices through sync.</li>
     <li>Sync data on Google Drive: as described in Section 4, delete it with &ldquo;Stop syncing&rdquo; &gt; &ldquo;Also delete the data on Drive&rdquo; in the App, or from your Google account settings.</li>
     <li>The App has no user accounts managed by us. For any other deletion request, please email us at the address below.</li>
@@ -119,6 +119,7 @@
   <h2>11. Changes to this policy</h2>
   <p>We may change this policy as needed. When we do, we will publish the change on this page and update the date.</p>
   <ul>
+    <li>October 28, 2026: With Google Drive sync now available in the Mac version, revised the note on the Mac version at the top and added that the Mac version also stores the sync authorization information in the Keychain. Revised the description of the Keychain items removed when the App is reinstalled to match how the App actually works (including the iOS version). Added that, in the Mac version, data on the device may be included in Mac backups and may remain after the App is deleted. Also added the Mac built-in browser and the in-app web view used with &ldquo;Open in the preview pane&rdquo; to how articles are opened.</li>
     <li>October 23, 2026: The feature previously named &ldquo;For You&rdquo; is now named &ldquo;Picks&rdquo; on screen (the content is unchanged). Published this English version, translated from the Japanese policy, with a section for U.S. residents (Section 9). It reflects the same content as the Japanese policy updated on the same day: the iOS advertising identifier and tracking permission, the in-app browser, background refresh, the list of synced items, the information stored on the device to renew the sync authorization (Android: email address; iOS: Keychain authorization information), and the retention periods of reading history (device: 180 days; Drive: about 90 days).</li>
   </ul>
 
