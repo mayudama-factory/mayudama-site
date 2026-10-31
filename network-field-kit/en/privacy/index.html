@@ -28,7 +28,7 @@
   <p>Mayudama Factory (&ldquo;we&rdquo;, &ldquo;us&rdquo;) provides &ldquo;Network Field Kit&rdquo; (the &ldquo;App&rdquo;), a network diagnostics app for iOS and iPadOS. This policy explains how information is handled in the App. This page is a translation of the Japanese policy; if the two differ, the Japanese version applies.</p>
 
   <h2>1. Information we receive</h2>
-  <p>The App has no server operated by us. We do not receive your information and we have no access to it. Diagnostic results, history, bookmarks and settings are stored on your device (and, if you turn on sync with Pro, also in your own iCloud). Network traffic goes directly from your device to the destination you specify or to the third-party services listed in Section 2.</p>
+  <p>The App has no server operated by us. We do not receive your information and we have no access to it. Diagnostic results, history, bookmarks and settings are stored on your device. Only if you turn on sync with Pro, history, bookmarks and report drafts are also stored in your own iCloud (settings are not synced). Network traffic goes directly from your device to the destination you specify or to the third-party services listed in Section 2.</p>
 
   <h2>2. Destinations and what is sent</h2>
   <p>The App communicates in order to run diagnostics. As with any internet communication, the IP address of your device reaches every destination. Each operator handles that information under its own policy.</p>
@@ -37,13 +37,15 @@
     <tr><td>The destination you specify</td><td>Ping, Traceroute, DNS, TLS, HTTP, etc.</td><td>Ordinary traffic to the host name or IP address you entered, when you tap Run. If you specify a device on your LAN (for example for SNMP), the traffic goes to that device.</td></tr>
     <tr><td>IPinfo, ipify</td><td>Looking up your public IP address and related information (ASN, country, etc.)</td><td>Traffic only, to learn the IP address. When you open or refresh the relevant screen.</td></tr>
     <tr><td>M-Lab (Measurement Lab)</td><td>Speed test</td><td>Test traffic, including a request to choose a nearby test server. <strong>M-Lab publishes every measurement as open data together with the IP address of the device that ran the test.</strong> When you start a test (a consent dialog is shown the first time).</td></tr>
-    <tr><td>Cloudflare</td><td>Speed test (fallback when M-Lab is unavailable, latency under load), DoH/DoT checks</td><td>Test traffic, or the DNS query for the domain name you entered. When you tap Run.</td></tr>
+    <tr><td>Cloudflare (speed.cloudflare.com and others)</td><td>Speed test (fallback when M-Lab is unavailable, latency under load), DoH/DoT checks</td><td>Test traffic (download and upload test data), or the DNS query for the domain name you entered. Your device&rsquo;s IP address reaches Cloudflare. When you start a test or tap Run (the first speed test asks for your consent).</td></tr>
+    <tr><td>An iperf3 server you specify</td><td>iperf3 speed test</td><td>Test TCP/UDP traffic only. <strong>The App connects only to the server you enter and never connects to a public server automatically.</strong> The server&rsquo;s operator can see your device&rsquo;s IP address. When you tap Start.</td></tr>
+    <tr><td>The destination you specify (Path MTU)</td><td>Path MTU discovery</td><td>ICMP Echo packets (small diagnostic packets) with the Don&rsquo;t Fragment (DF) bit set, sent to the host name or IP address you entered. When you tap Run.</td></tr>
     <tr><td>Google Public DNS, Quad9</td><td>DoH/DoT checks</td><td>The DNS query for the domain name you entered. When you tap Run.</td></tr>
     <tr><td>time.apple.com, ntp.nict.jp, an NTP server you enter</td><td>NTP (checking clock offset)</td><td>A time query (a small packet that includes the device&rsquo;s current time). When you tap Run.</td></tr>
     <tr><td>IANA (data.iana.org, whois.iana.org), and the RDAP/WHOIS servers of registries, registrars and regional internet registries that IANA points to</td><td>WHOIS/RDAP lookup</td><td><strong>The domain name or IP address you entered</strong> is sent to the RDAP server (HTTPS) or WHOIS server (TCP 43) that manages its registration data. Which server is used is determined by IANA&rsquo;s public data, and the server&rsquo;s operator can learn what you entered and your device&rsquo;s IP address. When you tap Run.</td></tr>
     <tr><td>Apple</td><td>Connectivity check</td><td>Traffic only. When you check connectivity.</td></tr>
     <tr><td>Google (AdMob, UMP)</td><td>Ads (free version), consent management</td><td>See Section 5.</td></tr>
-    <tr><td>iCloud (your own private database)</td><td>Pro sync (optional)</td><td>History, bookmarks, settings. See Section 4. When you turn on sync.</td></tr>
+    <tr><td>iCloud (your own private database)</td><td>Pro sync (optional)</td><td>History, bookmarks and report drafts (not settings). See Section 4. When you turn on sync.</td></tr>
   </table>
   <p>Apart from ads, the App does not send device identifiers or location to these destinations. For WHOIS/RDAP it does not send results either. IANA&rsquo;s public data (the list of where to send registration queries) is cached on your device for up to 24 hours to reduce re-downloads; it contains no personal information.</p>
 
@@ -60,7 +62,7 @@
   </ul>
 
   <h2>4. Sync with iCloud (Pro, optional)</h2>
-  <p>Only if you turn on sync with Pro, history (which may include SSIDs), bookmarks and settings are saved to your own iCloud private database and synced with other devices signed in with the same Apple ID. Sync is turned on only after you confirm in a dialog in the App, and is off by default. We do not receive this data and cannot read it. How iCloud handles data is governed by Apple&rsquo;s terms and privacy policy.</p>
+  <p>Only if you turn on sync with Pro, history (which may include SSIDs), bookmarks and report drafts are saved to your own iCloud private database and synced with other devices signed in with the same Apple ID. Settings such as thresholds and pinned tools are not synced and stay on your device only. Sync is turned on only after you confirm in a dialog in the App, and is off by default. We do not receive this data and cannot read it. How iCloud handles data is governed by Apple&rsquo;s terms and privacy policy.</p>
 
   <h2>5. Advertising and consent</h2>
   <p>The free version shows one ad from Google AdMob (Google LLC) at the bottom of the screen. Ads are not shown if you buy Pro.</p>
@@ -78,7 +80,7 @@
   <h2>7. Retention and deletion</h2>
   <ul>
     <li>History, bookmarks and settings: kept on your device until you delete them. You can delete history and bookmarks within the App. Deleting the App also deletes the data on your device.</li>
-    <li>iCloud sync data: turning sync off, or deleting history and other items in the App, is reflected in iCloud. You can also delete data that remains in iCloud from Settings &gt; your name &gt; iCloud &gt; Manage Storage.</li>
+    <li>iCloud sync data: deleting history and other items in the App while sync is on is reflected in iCloud. <strong>Turning sync off does not delete data that is already in iCloud.</strong> To remove data that remains in iCloud, delete it in the App while sync is still on, or delete it from Settings &gt; your name &gt; iCloud &gt; Manage Storage.</li>
     <li>The cached copy of IANA&rsquo;s public data: refreshed within 24 hours at most, and removed when you delete the App.</li>
     <li>Information that has reached third parties (measurement data published by M-Lab, information the advertising SDK sent to Google, etc.): we cannot delete it. M-Lab&rsquo;s open data may not be withdrawable once published. Please check each operator&rsquo;s policy.</li>
   </ul>
