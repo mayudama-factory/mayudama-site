@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network Field Kit プライバシーポリシー</title>
+<style>
+  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#F26B5B; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif; color:var(--ink); background:var(--bg); line-height:1.9; }
+  main { max-width:720px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:24px; margin:0 0 8px; }
+  .meta { color:var(--quiet); font-size:14px; margin:0 0 32px; }
+  h2 { font-size:18px; margin:36px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+  ul { padding-left:1.4em; }
+  a { color:var(--accent); }
+  .box { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 20px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:#fff; }
+  footer { margin-top:48px; color:var(--quiet); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Network Field Kit プライバシーポリシー</h1>
+  <p class="meta">制定日：2026年10月31日 ／ 最終更新日：2026年10月31日 ／ 提供者：Mayudama Factory ／ <a href="../en/privacy/">English</a></p>
+  <p>Mayudama Factory（以下「当方」）は、iOS・iPadOS 向けのネットワーク診断アプリ「Network Field Kit」（以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
+
+  <h2>1. 当方が受け取る情報</h2>
+  <p>本アプリには当方が運営するサーバーがなく、当方が利用者の情報を受け取ることも、利用者の情報にアクセスすることもありません。診断の結果、履歴、ブックマーク、設定は、端末の中に保存されるか（Pro で同期を有効にした場合は利用者本人の iCloud にも）保存されます。通信は、次の 2 のとおり、端末から利用者が指定した宛先または第三者のサービスへ直接行われます。</p>
+
+  <h2>2. 通信先と送られる情報</h2>
+  <p>本アプリは診断のために通信を行います。どの通信でも、通信先には、インターネット通信の性質上、端末の IP アドレスが届きます。各通信先での情報の取り扱いは、各事業者のポリシーに従います。</p>
+  <table>
+    <tr><th>通信先</th><th>機能</th><th>送られる情報・いつ</th></tr>
+    <tr><td>利用者が指定した宛先</td><td>Ping、Traceroute、DNS、TLS、HTTP など</td><td>入力したホスト名や IP アドレスへの通常の通信。利用者が「実行」したとき。LAN 内の機器（SNMP など）を指定した場合は、その機器へ通信します。</td></tr>
+    <tr><td>IPinfo、ipify</td><td>グローバル IP アドレスとその情報（ASN、国など）の取得</td><td>通信のみ（IP アドレスを調べるため）。該当の画面を開いたとき、または更新したとき。</td></tr>
+    <tr><td>M-Lab（Measurement Lab）</td><td>速度測定</td><td>測定用の通信。測定地点の選定のための問い合わせも含みます。<strong>M-Lab は、測定結果を、測定した端末の IP アドレスを含めて、公開データとして公開します。</strong>利用者が測定を開始したとき（初回は同意の画面で確認します）。</td></tr>
+    <tr><td>Cloudflare</td><td>速度測定（M-Lab が使えないときの代替、通信の遅延の測定）、DoH／DoT の確認</td><td>測定用の通信、または入力したドメイン名の DNS 問い合わせ。利用者が「実行」したとき。</td></tr>
+    <tr><td>Google Public DNS、Quad9</td><td>DoH／DoT の確認</td><td>入力したドメイン名の DNS 問い合わせ。利用者が「実行」したとき。</td></tr>
+    <tr><td>time.apple.com、ntp.nict.jp、利用者が入力した NTP サーバー</td><td>NTP（時刻のずれの確認）</td><td>時刻の問い合わせ（端末の現在時刻を含む小さなパケット）。利用者が「実行」したとき。</td></tr>
+    <tr><td>IANA（data.iana.org、whois.iana.org）、およびそこで示されるレジストリ・レジストラ・地域インターネットレジストリの RDAP／WHOIS サーバー</td><td>WHOIS／RDAP 検索</td><td><strong>入力したドメイン名または IP アドレス</strong>が、その登録情報を管理する RDAP サーバー（HTTPS）または WHOIS サーバー（TCP 43）に送られます。どのサーバーかは IANA の公開データで決まり、サーバーの事業者は入力内容と端末の IP アドレスを知り得ます。利用者が「実行」したとき。</td></tr>
+    <tr><td>Apple</td><td>接続性の判定</td><td>通信のみ。接続性を確認したとき。</td></tr>
+    <tr><td>Google（AdMob、UMP）</td><td>広告の表示（無料版）、同意の管理</td><td>5 章のとおり。</td></tr>
+    <tr><td>iCloud（利用者本人のプライベートデータベース）</td><td>Pro の同期（任意）</td><td>履歴、ブックマーク、設定。3 章のとおり。同期を有効にしたとき。</td></tr>
+  </table>
+  <p>本アプリは、これらの通信先に、広告を除き、端末の識別子や位置情報を送りません。WHOIS／RDAP では、結果を送ることもありません。IANA の公開データ（登録情報の問い合わせ先の一覧）は、再取得を減らすため、端末の中に最長 24 時間保存されます（個人情報を含みません）。</p>
+
+  <h2>3. 端末の中で扱う情報</h2>
+  <ul>
+    <li>診断の結果の履歴、ブックマーク、しきい値などの設定、ピン留め、登録した端末の名前など。端末の中（アプリの保存領域）に保存されます。</li>
+    <li>接続中の Wi-Fi の名前（SSID）。ホーム画面での表示のために取得し、診断の結果に付けて履歴に保存することがあります（ウォークテストでは、回線が切り替わったことだけを記録し、SSID の名前は保存しません）。SSID の取得には、iOS の仕組み上、位置情報の許可（使用中のみ）が必要です。<strong>本アプリは位置情報を使いません。位置情報を記録も送信もしません。</strong></li>
+    <li>SNMP のコミュニティ名。入力したものはアプリのメモリ上だけに置き、保存も送信（入力した宛先への SNMP 要求を除く）もしません。履歴、共有、CSV／JSON の書き出し、ブックマークにも含まれず、アプリを終了すると消えます。</li>
+    <li>ウィジェット。ウィジェットは通信しません。アプリが取得済みのグローバル IP アドレスや接続状態を、端末の中で共有して表示するだけです。ロック画面やホーム画面に IP アドレスなどが表示されると、端末を見る第三者にも見える可能性があります。ロック中は表示を伏せる設定にしています。</li>
+    <li>ショートカット。Ping や DNS などの診断をショートカットから実行できます。結果は端末の中のショートカットに渡されるだけで、当方には届きません。実行した診断の通信は 2 章のとおりです。</li>
+    <li>ローカルネットワークの許可。LAN の探索などを使うときだけ、用途を説明したうえで iOS が許可を求めます。同じ LAN 内の機器への通信と、端末の ARP 表の参照に使い、情報は端末の外に送りません。</li>
+    <li>MAC アドレス。iOS は、自分の端末の MAC アドレスや周辺のアクセスポイントの情報をアプリに提供しないため、本アプリはそれらを取得しません。同じ LAN 内の他の機器については、iOS が提供する範囲で表示します。</li>
+    <li>購入の情報。Pro の購入は Apple が処理します。本アプリはクレジットカードなどの情報を扱いません。</li>
+  </ul>
+
+  <h2>4. iCloud での同期（Pro・任意）</h2>
+  <p>Pro で同期を有効にした場合に限り、履歴（SSID を含む場合があります）、ブックマーク、設定を、利用者本人の iCloud のプライベートデータベースに保存し、同じ Apple ID の他の端末と同期します。同期はアプリ内の同意の画面で確認してから有効になり、既定では無効です。当方はこのデータを受け取らず、読むこともできません。iCloud での取り扱いは Apple の規約とプライバシーポリシーに従います。</p>
+
+  <h2>5. 広告と同意</h2>
+  <p>無料版では、画面の下部に Google AdMob（Google LLC）の広告を 1 つ表示します。Pro を購入すると広告は表示されません。</p>
+  <ul>
+    <li>広告の配信、成果の測定、不正の防止のため、広告 SDK は、広告用の識別子（IDFA）、端末の情報（機種、OS のバージョン、言語など）、IP アドレス（おおよその位置の推定に使われることがあります）、広告の表示や操作の状況などを Google に送ります。これらの情報は当方には届きません。</li>
+    <li>起動時などに、Apple の App Tracking Transparency により、トラッキングの許可を求めることがあります。許可した場合に限り、広告 SDK は IDFA を使って広告をパーソナライズし、成果を測定します。許可しない場合も広告は表示されますが、IDFA は使われず、パーソナライズされません。いつでも、端末の「設定」＞「プライバシーとセキュリティ」＞「トラッキング」で変更できます。</li>
+    <li>欧州経済領域（EEA）、英国、スイスなどの利用者には、広告を読み込む前に、Google の同意管理(UMP)の画面を表示します。選択は、アプリの設定から見直せます。</li>
+    <li>Google による情報の取り扱いは、<a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>に従います。</li>
+    <li>広告を許可しなくても、本アプリのすべての機能を使えます。</li>
+  </ul>
+
+  <h2>6. 子どものプライバシー</h2>
+  <p>本アプリは、13 歳未満の子どもを対象としていません。当方は、13 歳未満の子どもから個人情報を意図的に収集しません。お子さまが情報を提供したと思われる場合は、12 章の連絡先へご連絡ください。</p>
+
+  <h2>7. 保存期間と削除の方法</h2>
+  <ul>
+    <li>履歴、ブックマーク、設定：端末の中に、利用者が削除するまで保存されます。アプリ内の履歴・ブックマークの削除機能で削除できます。アプリを削除すると、端末の中のデータも削除されます。</li>
+    <li>iCloud の同期データ：同期を無効にするか、アプリ内で履歴などを削除すると、その内容が iCloud 側にも反映されます。iCloud に残るデータは、端末の「設定」＞ 自分の名前 ＞「iCloud」＞「ストレージを管理」からも削除できます。</li>
+    <li>IANA の公開データの写し：最長 24 時間で更新され、アプリを削除すると消えます。</li>
+    <li>第三者に届いた情報（M-Lab が公開した測定データ、広告 SDK が Google に送った情報など）：当方は削除できません。M-Lab の公開データは、いったん公開されると取り消せない場合があります。各事業者のポリシーをご確認ください。</li>
+  </ul>
+
+  <h2>8. 第三者への提供</h2>
+  <p>当方は、法令に基づく場合を除き、利用者の情報を第三者に提供しません。ただし、2 章と 5 章のとおり、利用者が実行した診断や広告のために、端末から第三者のサービスへ情報が送られます。</p>
+
+  <h2>9. 外部ライブラリとサービス</h2>
+  <p>本アプリは、広告のために Google Mobile Ads SDK と Google User Messaging Platform を使用します。アプリが使用する第三者のデータやサービスは、アプリの設定の「ライセンスと出典」にも記載しています。</p>
+
+  <h2>10. お問い合わせで受け取る情報</h2>
+  <p>メールでお問い合わせをいただいた場合、メールアドレスと本文、お知らせいただいた端末・OS・アプリのバージョンなどを受け取ります。返信と不具合の調査のためだけに使い、第三者には提供しません。</p>
+
+  <h2>11. このポリシーの変更</h2>
+  <p>必要に応じて、このポリシーを変更することがあります。変更するときは、このページに掲載し、最終更新日を改めます。</p>
+  <ul>
+    <li>2026年10月31日：制定。</li>
+  </ul>
+
+  <h2>12. 連絡先</h2>
+  <p>Mayudama Factory<br>メール：<a href="mailto:network-field-kit-support@mayudama.app">network-field-kit-support@mayudama.app</a></p>
+
+  <footer><a href="../../">Mayudama Factory トップへ</a> ／ <a href="../support/">サポート</a> ／ <a href="../en/privacy/">English</a></footer>
+</main>
+</body>
+</html>

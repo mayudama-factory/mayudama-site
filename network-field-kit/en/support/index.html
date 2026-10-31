@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support | Network Field Kit | Mayudama Factory</title>
+<style>
+  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#F26B5B; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.7; }
+  main { max-width:720px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:24px; margin:0 0 8px; }
+  .meta { color:var(--quiet); font-size:14px; margin:0 0 32px; }
+  h2 { font-size:18px; margin:36px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+  ul { padding-left:1.4em; }
+  a { color:var(--accent); }
+  .box { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 20px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:#fff; }
+  footer { margin-top:48px; color:var(--quiet); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Network Field Kit — Support</h1>
+  <p class="meta">Network diagnostics app &ldquo;Network Field Kit&rdquo; / Mayudama Factory / <a href="../../support/">日本語</a></p>
+
+  <h2>Contact us</h2>
+  <div class="box">
+    <p style="margin:0">Questions, bug reports and requests: <strong>network-field-kit-support@mayudama.app</strong></p>
+    <p style="margin:12px 0 0">Please tell us your device model, iOS/iPadOS version, the app version (shown in Settings), and the screen or steps that gave you trouble. We reply by email.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <p><strong>The Wi-Fi name (SSID) is not shown.</strong><br>
+  iOS requires the Location permission (While Using) to read the SSID. Open Settings &gt; Privacy &amp; Security &gt; Location Services and set Network Field Kit to &ldquo;While Using the App&rdquo;. The app does not record or send your location. The SSID is not shown on a cellular connection, while a VPN is active, or when you are not on Wi-Fi.</p>
+
+  <p><strong>The app asks for the Local Network permission.</strong><br>
+  It asks only when you open a feature that talks to devices on the same network, such as LAN discovery. Other features work without it. You can change it later in Settings &gt; Privacy &amp; Security &gt; Local Network.</p>
+
+  <p><strong>Why can&rsquo;t the app show a MAC address?</strong><br>
+  iOS does not give apps the MAC address of your own device or information about nearby access points. The app does not show information as if it were available when it is not. For other devices on your LAN, it shows what iOS provides.</p>
+
+  <p><strong>I heard the speed test makes my IP address public.</strong><br>
+  The speed test uses M-Lab (Measurement Lab). M-Lab publishes every measurement as open data together with the IP address of the device that ran the test. For that reason a consent dialog is shown before the first test, and the test starts only after you tap &ldquo;Agree and start&rdquo;. When M-Lab is unavailable the app may use Cloudflare, which also receives your IP address and the test traffic. A test uses a lot of data on cellular. See the <a href="../privacy/">Privacy Policy</a>.</p>
+
+  <p><strong>About ads.</strong><br>
+  The free version shows one banner ad at the bottom of the screen. Buying Pro removes it. All features work even if you do not allow tracking (ATT) or the consent prompt (UMP); in that case ads are not personalized.</p>
+
+  <p><strong>How do I restore my Pro purchase?</strong><br>
+  Tap &ldquo;Restore Purchases&rdquo; in the app&rsquo;s Settings. It works with the same Apple ID that made the purchase.</p>
+
+  <p><strong>About iCloud sync.</strong><br>
+  Sync is a Pro feature and is off by default. When on, history (which may include SSIDs), bookmarks and settings are saved to your own iCloud and shared with your other devices signed in with the same Apple ID. Your device must be signed in to iCloud, and iCloud must be allowed for this app. If it does not sync, check Settings &gt; your name &gt; iCloud.</p>
+
+  <p><strong>The widget does not update or shows no IP address.</strong><br>
+  Widgets do not communicate. They show the latest public IP address and connection state the app obtained, so open the app and let the Home screen load first. On the Lock Screen the display is hidden while the device is locked.</p>
+
+  <p><strong>Can I use it from Shortcuts?</strong><br>
+  Yes. You can run diagnostics such as Ping and DNS as Shortcuts actions. They do not open the app, and the result is returned as text for later actions in your shortcut.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Because of iOS, the MAC address of your own device and information about nearby access points are not available.</li>
+    <li>Depending on the iOS version, the MAC addresses of other devices on your LAN may not be available.</li>
+    <li>Some network equipment is set not to answer Ping and similar probes. No answer does not always mean a fault.</li>
+    <li>Speed test results vary with the test server, time of day, congestion and device state. Use them as a guide.</li>
+    <li>SNMP supports v2c only. The community string is sent in clear text.</li>
+    <li>With a VPN or certain network settings, results may differ from usual.</li>
+  </ul>
+
+  <footer><a href="../../../">Mayudama Factory home</a> / <a href="../privacy/">Privacy Policy</a> / <a href="../../support/">日本語</a></footer>
+</main>
+</body>
+</html>
