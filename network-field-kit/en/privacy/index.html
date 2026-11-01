@@ -35,9 +35,9 @@
   <table>
     <tr><th>Destination</th><th>Feature</th><th>What is sent, and when</th></tr>
     <tr><td>The destination you specify</td><td>Ping, Traceroute, DNS, TLS, HTTP, etc.</td><td>Ordinary traffic to the host name or IP address you entered, when you tap Run. If you specify a device on your LAN (for example for SNMP), the traffic goes to that device.</td></tr>
-    <tr><td>IPinfo, ipify</td><td>Looking up your public IP address and related information (ASN, country, etc.)</td><td>Traffic only, to learn the IP address. When you open or refresh the relevant screen.</td></tr>
-    <tr><td>M-Lab (Measurement Lab)</td><td>Speed test</td><td>Test traffic, including a request to choose a nearby test server. <strong>M-Lab publishes every measurement as open data together with the IP address of the device that ran the test.</strong> When you start a test (a consent dialog is shown the first time).</td></tr>
-    <tr><td>Cloudflare (speed.cloudflare.com and others)</td><td>Speed test (fallback when M-Lab is unavailable, latency under load), DoH/DoT checks</td><td>Test traffic (download and upload test data), or the DNS query for the domain name you entered. Your device&rsquo;s IP address reaches Cloudflare. When you start a test or tap Run (the first speed test asks for your consent).</td></tr>
+    <tr><td>IPinfo, ipify</td><td>Looking up your public IP address and related information (ASN, country, etc.); showing the ASN of hops in Traceroute/MTR (IPinfo)</td><td>For your public IP address, traffic only, to learn the IP address. In Traceroute/MTR, the public IP addresses on the path (routers and the destination) are sent to IPinfo to look up their ASN. When you open or refresh the relevant screen, or run Traceroute/MTR.</td></tr>
+    <tr><td>M-Lab (Measurement Lab)</td><td>Speed test</td><td>Test traffic, including a request to choose a nearby test server. <strong>M-Lab publishes every measurement as open data together with the IP address of the device that ran the test.</strong> When you start a test (a consent dialog is shown the first time). To follow M-Lab&rsquo;s usage policy, the App runs at most 20 M-Lab tests per 24 hours.</td></tr>
+    <tr><td>Cloudflare (speed.cloudflare.com and others)</td><td>Speed test (fallback when M-Lab is unavailable or its usage limit is reached, latency under load, periodic tests in the Walk Test), DoH/DoT checks</td><td>Test traffic (download and upload test data), or the DNS query for the domain name you entered. Your device&rsquo;s IP address reaches Cloudflare. When you start a test or tap Run (the first speed test asks for your consent). If you choose &ldquo;M-Lab only&rdquo;, no latency probes are sent to Cloudflare.</td></tr>
     <tr><td>An iperf3 server you specify</td><td>iperf3 speed test</td><td>Test TCP/UDP traffic only. <strong>The App connects only to the server you enter and never connects to a public server automatically.</strong> The server&rsquo;s operator can see your device&rsquo;s IP address. When you tap Start.</td></tr>
     <tr><td>The destination you specify (Path MTU)</td><td>Path MTU discovery</td><td>ICMP Echo packets (small diagnostic packets) with the Don&rsquo;t Fragment (DF) bit set, sent to the host name or IP address you entered. When you tap Run.</td></tr>
     <tr><td>Google Public DNS, Quad9</td><td>DoH/DoT checks</td><td>The DNS query for the domain name you entered. When you tap Run.</td></tr>
@@ -58,6 +58,7 @@
     <li>Shortcuts. You can run diagnostics such as Ping and DNS from Shortcuts. The result is handed only to Shortcuts on your device and does not reach us. The network traffic of the diagnostic you run is as described in Section 2.</li>
     <li>Local Network permission. Only when you use features such as LAN discovery, iOS asks for permission after the App explains why. It is used to reach devices on the same LAN and to read the device&rsquo;s ARP table; the information is not sent off the device.</li>
     <li>MAC addresses. iOS does not give apps the MAC address of your own device or information about nearby access points, so the App does not obtain them. For other devices on your LAN, the App shows what iOS provides.</li>
+    <li>M-Lab usage count. To follow M-Lab&rsquo;s usage policy, the App keeps the times of M-Lab tests (last 24 hours only) on your device. They are not sent anywhere.</li>
     <li>Purchases. Purchases of Pro are processed by Apple. The App does not handle payment card information.</li>
   </ul>
 
@@ -82,6 +83,7 @@
     <li>History, bookmarks and settings: kept on your device until you delete them. You can delete history and bookmarks within the App. Deleting the App also deletes the data on your device.</li>
     <li>iCloud sync data: deleting history and other items in the App while sync is on is reflected in iCloud. <strong>Turning sync off does not delete data that is already in iCloud.</strong> To remove data that remains in iCloud, delete it in the App while sync is still on, or delete it from Settings &gt; your name &gt; iCloud &gt; Manage Storage.</li>
     <li>The cached copy of IANA&rsquo;s public data: refreshed within 24 hours at most, and removed when you delete the App.</li>
+    <li>Speed test consent: you can review and withdraw it in the App&rsquo;s Settings under &ldquo;Speed test consent&rdquo;. If you withdraw, you are asked again before the next speed test (data M-Lab has already published is not removed).</li>
     <li>Information that has reached third parties (measurement data published by M-Lab, information the advertising SDK sent to Google, etc.): we cannot delete it. M-Lab&rsquo;s open data may not be withdrawable once published. Please check each operator&rsquo;s policy.</li>
   </ul>
 
