@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>スキダネ - 好きなニュースを選んで読むRSSリーダー</title>
+<meta name="description" content="好きなことの更新を、全部ここで。ジャンルを選ぶだけで厳選したサイトがそろう、日本語向けのRSSリーダー。サーバーなし、データは端末の中。Android・iPhone・iPad で使えます。">
+<link rel="canonical" href="https://mayudama.app/sukidane/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mayudama Factory">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="スキダネ - 好きなニュースを選んで読むRSSリーダー">
+<meta property="og:description" content="ジャンルを選ぶだけで厳選したサイトがそろう、日本語向けのRSSリーダー。サーバーなし、データは端末の中。">
+<meta property="og:url" content="https://mayudama.app/sukidane/">
+<meta property="og:image" content="https://mayudama.app/sukidane/assets/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="スキダネ - 好きなニュースを選んで読むRSSリーダー">
+<meta name="twitter:description" content="ジャンルを選ぶだけで厳選したサイトがそろう、日本語向けのRSSリーダー。サーバーなし、データは端末の中。">
+<meta name="twitter:image" content="https://mayudama.app/sukidane/assets/ogp.jpg">
+<!--
+  スクリーンショットの差し替え（J3 の新しい画像など）：assets/shot-1.jpg 〜 shot-4.jpg を同じ名前で上書きし、
+  下の alt だけ直す。元：~/development/screenshots/sukidane/2.0.0-assets/ja/iphone-6.9/upload/ の
+  06-01-onboarding-categories・01-04-home・02-04c-pickup・04-05-bookmarks（1320x2868）。
+  書き出し：sips -Z 1104 -s format jpeg -s formatOptions 80 <元> --out assets/shot-N.jpg（508x1104）。
+  画像は架空の媒体名だけが写るものを使う（実在の媒体名・広告・DEBUG の帯が写っていないこと）。
+
+  Mac App Store のバッジの出し方（Mac の承認後）：
+  1. ASC の「スキダネ for Mac」の Apple ID（数字）で、下の id="badge-mac" の href の MAC_APP_ID を置き換える。
+  2. id="badge-mac" の a と id="faq-mac" の p から hidden 属性を外す。
+  3. 商標の表記は最初から Mac App Store を含めてあるので、そのまま。
+  バッジは公式のものを変えずに使う（色・形・縦横比。画面上の高さは 48px、周りの余白は高さの 1/4 以上）。
+-->
+<style>
+  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#F26B5B; }
+  * { box-sizing:border-box; }
+  [hidden] { display:none !important; }
+  body { margin:0; font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif; color:var(--ink); background:var(--bg); line-height:1.8; }
+  main { max-width:880px; margin:0 auto; padding:56px 16px 80px; }
+  a { color:var(--accent); }
+  .hero { text-align:center; padding-bottom:8px; }
+  .hero img.icon { width:96px; height:96px; border-radius:22px; }
+  h1 { font-size:34px; margin:12px 0 0; letter-spacing:.04em; line-height:1.3; }
+  .catch { font-size:18px; font-weight:700; margin:4px 0 16px; }
+  .lead { max-width:560px; margin:0 auto; color:var(--ink); text-align:left; }
+  .badges { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px 16px; margin:28px 0 8px; }
+  .badges a { display:inline-block; line-height:0; }
+  .badges img { display:block; }
+  .shots { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; margin:40px -16px 0; padding:0 16px 8px; -webkit-overflow-scrolling:touch; }
+  .shots img { flex:0 0 auto; width:62vw; max-width:254px; height:auto; scroll-snap-align:center; border:1px solid var(--line); border-radius:14px; background:#fff; }
+  @media (min-width:760px) {
+    .shots { overflow-x:visible; margin:40px 0 0; padding:0; justify-content:center; }
+    .shots img { flex:1 1 0; width:auto; max-width:200px; }
+  }
+  h2 { font-size:20px; margin:56px 0 16px; padding-top:20px; border-top:1px solid var(--line); }
+  .features { display:grid; grid-template-columns:1fr; gap:12px; }
+  @media (min-width:760px) { .features { grid-template-columns:1fr 1fr; } }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 20px; }
+  .card h3 { font-size:16px; margin:0 0 4px; }
+  .card p { margin:0; font-size:15px; }
+  .faq dt { font-weight:700; margin-top:20px; }
+  .faq dd { margin:4px 0 0; }
+  .note { color:var(--quiet); font-size:13px; line-height:1.7; }
+  footer { margin-top:56px; color:var(--quiet); font-size:13px; border-top:1px solid var(--line); padding-top:16px; }
+  footer p { margin:0 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <img class="icon" src="icon.png" width="96" height="96" alt="スキダネのアイコン">
+    <h1>スキダネ</h1>
+    <p class="catch">好きなニュースを選んで読むRSSリーダー</p>
+    <p class="lead">好きなことの更新を、全部ここで。日本語のニュースサイトやブログの更新をまとめて読める、シンプルなRSSリーダーです。「RSS」の知識は要りません。気になるジャンルを選ぶだけで、厳選したサイトが自動でそろいます。</p>
+    <div class="badges">
+      <a href="https://apps.apple.com/jp/app/id6823978736"><img src="assets/badges/app-store-ja.svg" width="131" height="48" alt="App Store からダウンロード"></a>
+      <a href="https://play.google.com/store/apps/details?id=app.mayudama.sukidane&amp;hl=ja"><img src="assets/badges/google-play-ja.png" width="163" height="63" alt="Google Play で手に入れよう"></a>
+      <!-- Mac の承認後に hidden を外し、MAC_APP_ID を置き換える（このファイル先頭のコメント） -->
+      <a class="badge" id="badge-mac" href="https://apps.apple.com/jp/app/idMAC_APP_ID" hidden><img src="assets/badges/mac-app-store-ja.svg" width="168" height="48" alt="Mac App Store からダウンロード"></a>
+    </div>
+  </header>
+
+  <div class="shots">
+    <img src="assets/shot-1.jpg" width="508" height="1104" loading="lazy" alt="ジャンルを選ぶ画面">
+    <img src="assets/shot-2.jpg" width="508" height="1104" loading="lazy" alt="カテゴリ別のホーム画面">
+    <img src="assets/shot-3.jpg" width="508" height="1104" loading="lazy" alt="Pickup の画面">
+    <img src="assets/shot-4.jpg" width="508" height="1104" loading="lazy" alt="ブックマークの画面">
+  </div>
+
+  <h2>特長</h2>
+  <div class="features">
+    <div class="card">
+      <h3>ジャンルを選ぶだけで、そろう</h3>
+      <p>初めて開いたとき、IT・ゲーム・スポーツ・マンガ・科学など、好きなカテゴリを選ぶだけ。おすすめのサイトをまとめてフォローして、すぐに読み始められます。読みたいサイトは URL を入れて自由に足せます。</p>
+    </div>
+    <div class="card">
+      <h3>サーバーなし。データは端末の中に</h3>
+      <p>運営側のサーバーはありません。サイトからの記事の取得も、データの保存も、すべて端末の中で行います。どの記事を読んだかを運営者に送ることもありません。</p>
+    </div>
+    <div class="card">
+      <h3>記事は元のサイトで読む</h3>
+      <p>記事の本文は、表示も保存もしません。見出し・要約・画像とサイト名を一覧に出し、タップすると元の記事ページを開きます。見出しや要約を書き換えることもしません。</p>
+    </div>
+    <div class="card">
+      <h3>Pickup と、自分好みの表示</h3>
+      <p>読んだ記事の傾向から、合いそうな記事を端末の中で選んで、朝・昼・夜のピックアップにまとめます。記事の表示形式・テーマ・キーワードフィルターも選べます。</p>
+    </div>
+  </div>
+
+  <h2>料金</h2>
+  <p>無料でお使いいただけます。記事一覧の途中に広告（「広告」と表示します）が入ります。<br>
+  iPhone・iPad 版では、買い切りの「Pro」を購入すると広告が消えます（ほかの機能は変わりません）。Android 版の Pro は準備中です。価格は各ストアでご確認ください。</p>
+
+  <h2>よくある質問</h2>
+  <dl class="faq">
+    <dt>どの端末で使えますか？</dt>
+    <dd>Android 8.0 以上のスマートフォン・タブレットと、iOS 16 以上の iPhone、iPadOS 16 以上の iPad で使えます。</dd>
+    <dd id="faq-mac" hidden>Mac 版「スキダネ for Mac」は macOS 14 以上で使えます。</dd>
+
+    <dt>アカウントの登録は要りますか？ 端末の間で同期できますか？</dt>
+    <dd>スキダネ独自のアカウントはありません。同期は任意で、Google アカウントでログインすると、ご自身の Google ドライブ（このアプリ専用の領域だけ）を使って、フォロー中のサイトや既読・ブックマークなどを同期できます。ドライブのほかのファイルには触れず、運営者が同期のデータを見ることもありません。</dd>
+
+    <dt>広告はどこに出ますか？</dt>
+    <dd>記事一覧の途中に、「広告」と表示した広告が入ります。記事ページの上には広告を重ねません。</dd>
+
+    <dt>おすすめにないサイトを読みたい。</dt>
+    <dd>「フィード」タブから、サイトの URL を入れて追加できます（更新情報のフィードを自動で探します）。ほかの RSS リーダーからは OPML ファイルで取り込めます。</dd>
+
+    <dt>掲載されている媒体の方へ</dt>
+    <dd>掲載や削除のご依頼は、<a href="media/">掲載メディアの方へ</a>のページをご覧ください。</dd>
+
+    <dt>問い合わせ先は？</dt>
+    <dd>sukidane-support@mayudama.app へメールでお送りください。アプリの「設定」→「お問い合わせ」からも送れます。よくある質問は<a href="support/">サポート</a>のページにもあります。</dd>
+  </dl>
+
+  <footer>
+    <p><a href="privacy/">プライバシーポリシー</a> ／ <a href="terms/">利用規約</a> ／ <a href="support/">サポート</a> ／ <a href="media/">掲載メディアの方へ</a> ／ <a href="../">Mayudama Factory トップへ</a></p>
+    <p>お問い合わせ：sukidane-support@mayudama.app</p>
+    <p class="note">Apple および Apple ロゴは、米国その他の国で登録された Apple Inc. の商標です。App Store および Mac App Store は Apple Inc. のサービスマークです。Google Play および Google Play ロゴは Google LLC の商標です。</p>
+    <p>&copy; 2026 Mayudama Factory</p>
+  </footer>
+</main>
+</body>
+</html>
