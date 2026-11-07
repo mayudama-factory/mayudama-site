@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サポート | Network Field Kit | Mayudama Factory</title>
+<style>
+  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#F26B5B; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.7; }
+  main { max-width:720px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:24px; margin:0 0 8px; }
+  .meta { color:var(--quiet); font-size:14px; margin:0 0 32px; }
+  h2 { font-size:18px; margin:36px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+  ul { padding-left:1.4em; }
+  a { color:var(--accent); }
+  .box { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 20px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:#fff; }
+  footer { margin-top:48px; color:var(--quiet); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Network Field Kit サポート</h1>
+  <p class="meta">ネットワーク診断アプリ「Network Field Kit」／ Mayudama Factory ／ <a href="../en/support/">English</a></p>
+
+  <h2>お問い合わせ</h2>
+  <div class="box">
+    <p style="margin:0">ご質問・不具合・ご要望：<strong>network-field-kit-support@mayudama.app</strong></p>
+    <p style="margin:12px 0 0">お使いの端末（iPhone／iPad の機種）・iOS／iPadOS のバージョン・アプリのバージョン（設定に表示）・困っている画面や手順を添えていただけると助かります。返信はメールでお送りします。</p>
+  </div>
+
+  <h2>よくある質問</h2>
+  <p><strong>Wi-Fi の名前（SSID）が表示されません。</strong><br>
+  iOS は、SSID の取得に位置情報の許可（使用中のみ）を求めます。端末の「設定」＞「プライバシーとセキュリティ」＞「位置情報サービス」で Network Field Kit を「このアプリの使用中のみ許可」にしてください。本アプリは位置情報を記録も送信もしません。モバイル回線に接続中、VPN の利用中、Wi-Fi に接続していないときは、表示されません。</p>
+
+  <p><strong>「ローカルネットワーク」の許可を求められます。</strong><br>
+  LAN の探索など、同じネットワーク内の機器に通信する機能を開いたときだけ求めます。許可しなくても、他の機能は使えます。あとから変えるときは、「設定」＞「プライバシーとセキュリティ」＞「ローカルネットワーク」で変更できます。</p>
+
+  <p><strong>MAC アドレスが表示されない（取得できない）のはなぜですか。</strong><br>
+  iOS は、自分の端末の MAC アドレスや、周辺のアクセスポイントの情報をアプリに提供しません。取得できない情報を、取得できるかのように表示することはしません。同じ LAN 内の他の機器の MAC アドレスは、iOS が提供する範囲で表示します。</p>
+
+  <p><strong>速度測定では、どこに通信しますか。</strong><br>
+  速度測定は Cloudflare（speed.cloudflare.com）で行います。端末の IP アドレスと測定の通信が Cloudflare に届きます。初回の測定の前に同意の画面を表示し、「同意して開始」を押したときだけ測定を始めます。同意は、アプリの設定の「速度測定の同意」で確認・取り消しできます。モバイル回線では通信量が多くなります。詳しくは<a href="../privacy/">プライバシーポリシー</a>をご覧ください。</p>
+
+  <p><strong>広告について。</strong><br>
+  無料版では、画面の下部にバナー広告を 1 つ表示します。Pro を購入すると表示されなくなります。トラッキングの許可（ATT）や同意の画面（UMP）で許可しなくても、すべての機能を使えます。許可しない場合、広告はパーソナライズされません。</p>
+
+  <p><strong>Pro の購入を復元したい。</strong><br>
+  アプリの設定の「Pro の内容を見る・購入・復元」を開き、「購入を復元」を押してください。購入したときと同じ Apple ID で使えます。</p>
+
+  <p><strong>iCloud での同期について。</strong><br>
+  同期は Pro の機能で、既定では無効です。有効にすると、履歴（SSID を含む場合があります）、ブックマーク、レポートの下書きが、ご自身の iCloud に保存され（しきい値などの設定は同期しません）、同じ Apple ID の他の端末と共有されます。使うには、端末が iCloud にサインインしていて、本アプリの iCloud が許可されている必要があります。同期されないときは、「設定」＞ 自分の名前 ＞「iCloud」を確かめてください。</p>
+
+  <p><strong>ウィジェットが更新されない／IP アドレスが表示されません。</strong><br>
+  ウィジェットは通信しません。アプリが取得した直近のグローバル IP アドレスや接続状態を表示するので、先にアプリを開いてホーム画面で取得してください。ロック画面では、端末がロックされている間は表示を伏せます。</p>
+
+  <p><strong>ショートカットから使えますか。</strong><br>
+  Ping や DNS などの診断を、ショートカット App のアクションとして実行できます。画面は開かず、結果が文字として返ります。ショートカットの後続のアクションで使えます。</p>
+
+  <h2>既知の制約</h2>
+  <ul>
+    <li>iOS の仕様により、自分の端末の MAC アドレスと、周辺のアクセスポイントの情報は取得できません。</li>
+    <li>iOS のバージョンによっては、同じ LAN 内の他の機器の MAC アドレスを取得できないことがあります。</li>
+    <li>ネットワーク機器の中には、Ping などの応答を返さない設定のものがあります。応答がないことが、障害を意味するとは限りません。</li>
+    <li>速度測定の結果は、測定先、時間帯、回線の混雑、端末の状態によって変わります。目安としてご利用ください。</li>
+    <li>SNMP は v2c のみに対応しています。コミュニティ名は平文で送られます。</li>
+    <li>VPN の利用中や、ネットワークの設定によっては、結果が通常と異なることがあります。</li>
+  </ul>
+
+  <footer><a href="../../">Mayudama Factory トップへ</a> ／ <a href="../privacy/">プライバシーポリシー</a> ／ <a href="../en/support/">English</a></footer>
+</main>
+</body>
+</html>

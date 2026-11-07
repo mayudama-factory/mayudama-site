@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network Field Kit Privacy Policy | Mayudama Factory</title>
+<style>
+  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#F26B5B; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.7; }
+  main { max-width:720px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:24px; margin:0 0 8px; }
+  .meta { color:var(--quiet); font-size:14px; margin:0 0 32px; }
+  h2 { font-size:18px; margin:36px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+  ul { padding-left:1.4em; }
+  a { color:var(--accent); }
+  .box { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 20px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:#fff; }
+  footer { margin-top:48px; color:var(--quiet); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Network Field Kit Privacy Policy</h1>
+  <p class="meta">Effective: October 31, 2026 / Last updated: October 31, 2026 / Provider: Mayudama Factory / <a href="../../privacy/">日本語</a></p>
+  <p>Mayudama Factory (&ldquo;we&rdquo;, &ldquo;us&rdquo;) provides &ldquo;Network Field Kit&rdquo; (the &ldquo;App&rdquo;), a network diagnostics app for iOS and iPadOS. This policy explains how information is handled in the App. This page is a translation of the Japanese policy; if the two differ, the Japanese version applies.</p>
+
+  <h2>1. Information we receive</h2>
+  <p>The App has no server operated by us. We do not receive your information and we have no access to it. Diagnostic results, history, bookmarks and settings are stored on your device. Only if you turn on sync with Pro, history, bookmarks and report drafts are also stored in your own iCloud (settings are not synced). Network traffic goes directly from your device to the destination you specify or to the third-party services listed in Section 2.</p>
+
+  <h2>2. Destinations and what is sent</h2>
+  <p>The App communicates in order to run diagnostics. As with any internet communication, the IP address of your device reaches every destination. Each operator handles that information under its own policy.</p>
+  <table>
+    <tr><th>Destination</th><th>Feature</th><th>What is sent, and when</th></tr>
+    <tr><td>The destination you specify</td><td>Ping, Traceroute, DNS, TLS, HTTP, etc.</td><td>Ordinary traffic to the host name or IP address you entered, when you tap Run. If you specify a device on your LAN (for example for SNMP), the traffic goes to that device.</td></tr>
+    <tr><td>IPinfo, ipify</td><td>Looking up your public IP address and related information (ASN, country, etc.); showing the ASN of hops in Traceroute/MTR (IPinfo)</td><td>For your public IP address, traffic only, to learn the IP address. In Traceroute/MTR, the public IP addresses on the path (routers and the destination) are sent to IPinfo to look up their ASN. When you open or refresh the relevant screen, or run Traceroute/MTR.</td></tr>
+    <tr><td>Cloudflare (speed.cloudflare.com and others)</td><td>Speed test, latency under load, periodic tests in the Walk Test, DoH/DoT checks</td><td>Test traffic (download and upload test data), or the DNS query for the domain name you entered. Your device&rsquo;s IP address reaches Cloudflare. When you start a test or tap Run (the first speed test asks for your consent).</td></tr>
+    <tr><td>An iperf3 server you specify</td><td>iperf3 speed test</td><td>Test TCP/UDP traffic only. <strong>The App connects only to the server you enter and never connects to a public server automatically.</strong> The server&rsquo;s operator can see your device&rsquo;s IP address. When you tap Start.</td></tr>
+    <tr><td>The destination you specify (Path MTU)</td><td>Path MTU discovery</td><td>ICMP Echo packets (small diagnostic packets) with the Don&rsquo;t Fragment (DF) bit set, sent to the host name or IP address you entered. When you tap Run.</td></tr>
+    <tr><td>Google Public DNS, Quad9</td><td>DoH/DoT checks</td><td>The DNS query for the domain name you entered. When you tap Run.</td></tr>
+    <tr><td>time.apple.com, ntp.nict.jp, an NTP server you enter</td><td>NTP (checking clock offset)</td><td>A time query (a small packet that includes the device&rsquo;s current time). When you tap Run.</td></tr>
+    <tr><td>IANA (data.iana.org, whois.iana.org), and the RDAP/WHOIS servers of registries, registrars and regional internet registries that IANA points to</td><td>WHOIS/RDAP lookup</td><td><strong>The domain name or IP address you entered</strong> is sent to the RDAP server (HTTPS) or WHOIS server (TCP 43) that manages its registration data. Which server is used is determined by IANA&rsquo;s public data, and the server&rsquo;s operator can learn what you entered and your device&rsquo;s IP address. When you tap Run.</td></tr>
+    <tr><td>Apple</td><td>Connectivity check</td><td>Traffic only. When you check connectivity.</td></tr>
+    <tr><td>Google (AdMob, UMP)</td><td>Ads (free version), consent management</td><td>See Section 5.</td></tr>
+    <tr><td>iCloud (your own private database)</td><td>Pro sync (optional)</td><td>History, bookmarks and report drafts (not settings). See Section 4. When you turn on sync.</td></tr>
+  </table>
+  <p>Apart from ads, the App does not send device identifiers or location to these destinations. For WHOIS/RDAP it does not send results either. IANA&rsquo;s public data (the list of where to send registration queries) is cached on your device for up to 24 hours to reduce re-downloads; it contains no personal information.</p>
+
+  <h2>3. Information handled on your device</h2>
+  <ul>
+    <li>History of diagnostic results, bookmarks, settings such as thresholds, pinned tools, and names of devices you register are stored on your device (in the App&rsquo;s storage).</li>
+    <li>The name of the Wi-Fi network you are connected to (SSID). It is read to show on the Home screen and may be saved with a diagnostic result in history. (The walk test records only that the connection changed, not the SSID.) On iOS, reading the SSID requires the Location permission (While Using). <strong>The App does not use your location, and does not record or send it.</strong></li>
+    <li>SNMP community strings. What you enter is kept only in the App&rsquo;s memory. It is not saved, and not sent anywhere except in the SNMP request to the destination you entered. It does not appear in history, sharing, CSV/JSON export or bookmarks, and disappears when the App quits.</li>
+    <li>Widgets. Widgets do not communicate. They only show the public IP address and connection state the App has already obtained, shared on your device. If the IP address is shown on a Lock Screen or Home Screen, other people looking at your device may see it. The display is hidden while the device is locked.</li>
+    <li>Shortcuts. You can run diagnostics such as Ping and DNS from Shortcuts. The result is handed only to Shortcuts on your device and does not reach us. The network traffic of the diagnostic you run is as described in Section 2.</li>
+    <li>Local Network permission. Only when you use features such as LAN discovery, iOS asks for permission after the App explains why. It is used to reach devices on the same LAN and to read the device&rsquo;s ARP table; the information is not sent off the device.</li>
+    <li>MAC addresses. iOS does not give apps the MAC address of your own device or information about nearby access points, so the App does not obtain them. For other devices on your LAN, the App shows what iOS provides.</li>
+    <li>Purchases. Purchases of Pro are processed by Apple. The App does not handle payment card information.</li>
+  </ul>
+
+  <h2>4. Sync with iCloud (Pro, optional)</h2>
+  <p>Only if you turn on sync with Pro, history (which may include SSIDs), bookmarks and report drafts are saved to your own iCloud private database and synced with other devices signed in with the same Apple ID. Settings such as thresholds and pinned tools are not synced and stay on your device only. Sync is turned on only after you confirm in a dialog in the App, and is off by default. We do not receive this data and cannot read it. How iCloud handles data is governed by Apple&rsquo;s terms and privacy policy.</p>
+
+  <h2>5. Advertising and consent</h2>
+  <p>The free version shows one ad from Google AdMob (Google LLC) at the bottom of the screen. Ads are not shown if you buy Pro.</p>
+  <ul>
+    <li>To deliver ads, measure results and prevent fraud, the advertising SDK sends the advertising identifier (IDFA), device information (model, OS version, language, etc.), IP address (which may be used to estimate approximate location), and how ads are viewed and used, to Google. This information does not reach us.</li>
+    <li>The App may ask for permission to track you using Apple&rsquo;s App Tracking Transparency. Only if you allow it does the advertising SDK use the IDFA to personalize ads and measure results. If you do not allow it, ads are still shown, but the IDFA is not used and ads are not personalized. You can change this at any time in Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+    <li>For users in the European Economic Area (EEA), the United Kingdom, Switzerland and similar regions, a consent prompt from Google&rsquo;s consent management platform (UMP) is shown before ads are loaded. You can review your choice in the App&rsquo;s settings.</li>
+    <li>How Google handles information is governed by <a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a>.</li>
+    <li>All features of the App work even if you do not allow tracking.</li>
+  </ul>
+
+  <h2>6. Children&rsquo;s privacy</h2>
+  <p>The App is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided information, please contact us at the address in Section 12.</p>
+
+  <h2>7. Retention and deletion</h2>
+  <ul>
+    <li>History, bookmarks and settings: kept on your device until you delete them. You can delete history and bookmarks within the App. Deleting the App also deletes the data on your device.</li>
+    <li>iCloud sync data: deleting history and other items in the App while sync is on is reflected in iCloud. <strong>Turning sync off does not delete data that is already in iCloud.</strong> To remove data that remains in iCloud, delete it in the App while sync is still on, or delete it from Settings &gt; your name &gt; iCloud &gt; Manage Storage.</li>
+    <li>The cached copy of IANA&rsquo;s public data: refreshed within 24 hours at most, and removed when you delete the App.</li>
+    <li>Speed test consent: you can review and withdraw it in the App&rsquo;s Settings under &ldquo;Speed test consent&rdquo;. If you withdraw, you are asked again before the next speed test.</li>
+    <li>Information that has reached third parties (speed-test traffic that reached Cloudflare, information the advertising SDK sent to Google, etc.): we cannot delete it. Please check each operator&rsquo;s policy.</li>
+  </ul>
+
+  <h2>8. Disclosure to third parties</h2>
+  <p>We do not provide your information to third parties except as required by law. As described in Sections 2 and 5, however, information is sent from your device to third-party services for the diagnostics you run and for ads.</p>
+
+  <h2>9. Third-party libraries and services</h2>
+  <p>The App uses the Google Mobile Ads SDK and the Google User Messaging Platform for ads. Third-party data and services used by the App are also listed in the App&rsquo;s Settings under &ldquo;Licenses &amp; Sources&rdquo;.</p>
+
+  <h2>10. Information we receive when you contact us</h2>
+  <p>If you email us, we receive your email address, your message, and details you tell us such as the device, OS and App version. We use it only to reply and to investigate problems, and we do not provide it to third parties.</p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>We may change this policy as needed. When we do, we will publish the change on this page and update the date.</p>
+  <ul>
+    <li>October 31, 2026: First published.</li>
+  </ul>
+
+  <h2>12. Contact</h2>
+  <p>Mayudama Factory<br>Email: <a href="mailto:network-field-kit-support@mayudama.app">network-field-kit-support@mayudama.app</a></p>
+
+  <footer><a href="../../../">Mayudama Factory home</a> / <a href="../support/">Support</a> / <a href="../../privacy/">日本語のプライバシーポリシー</a></footer>
+</main>
+</body>
+</html>
