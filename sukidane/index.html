@@ -26,7 +26,7 @@
   書き出し：sips -Z 1104 -s format jpeg -s formatOptions 80 <元> --out assets/shot-N.jpg（508x1104）。
   画像は架空の媒体名だけが写るものを使う（実在の媒体名・広告・DEBUG の帯が写っていないこと）。
 
-  Mac App Store のバッジの出し方（Mac の承認後）：
+  Mac App Store のバッジ（Apple ID 6827132797 を入れ、hidden を外し済み。Mac のリリースが済むまでマージしない）。出し方の記録：
   1. ASC の「スキダネ for Mac」の Apple ID（数字）で、下の id="badge-mac" の href の MAC_APP_ID を置き換える。
   2. id="badge-mac" の a と id="faq-mac" の p から hidden 属性を外す。
   3. 商標の表記は最初から Mac App Store を含めてあるので、そのまま。
@@ -76,8 +76,7 @@
     <div class="badges">
       <a href="https://apps.apple.com/jp/app/id6823978736"><img src="assets/badges/app-store-ja.svg" width="131" height="48" alt="App Store からダウンロード"></a>
       <a href="https://play.google.com/store/apps/details?id=app.mayudama.sukidane&amp;hl=ja"><img src="assets/badges/google-play-ja.png" width="163" height="63" alt="Google Play で手に入れよう"></a>
-      <!-- Mac の承認後に hidden を外し、MAC_APP_ID を置き換える（このファイル先頭のコメント） -->
-      <a class="badge" id="badge-mac" href="https://apps.apple.com/jp/app/idMAC_APP_ID" hidden><img src="assets/badges/mac-app-store-ja.svg" width="168" height="48" alt="Mac App Store からダウンロード"></a>
+      <a class="badge" id="badge-mac" href="https://apps.apple.com/jp/app/id6827132797"><img src="assets/badges/mac-app-store-ja.svg" width="168" height="48" alt="Mac App Store からダウンロード"></a>
     </div>
   </header>
 
@@ -110,13 +109,13 @@
 
   <h2>料金</h2>
   <p>無料でお使いいただけます。記事一覧の途中に広告（「広告」と表示します）が入ります。<br>
-  iPhone・iPad 版では、買い切りの「Pro」を購入すると広告が消えます（ほかの機能は変わりません）。Android 版の Pro は準備中です。価格は各ストアでご確認ください。</p>
+  iPhone・iPad 版では、買い切りの「Pro」を購入すると広告が消えます（ほかの機能は変わりません）。Android 版の Pro は準備中です。Mac 版（スキダネ for Mac）は広告なしで、30 日間の無料の試用のあと、買い切りの「Pro for Mac」で使い続けられます。価格は各ストアでご確認ください。</p>
 
   <h2>よくある質問</h2>
   <dl class="faq">
     <dt>どの端末で使えますか？</dt>
     <dd>Android 8.0 以上のスマートフォン・タブレットと、iOS 16 以上の iPhone、iPadOS 16 以上の iPad で使えます。</dd>
-    <dd id="faq-mac" hidden>Mac 版「スキダネ for Mac」は macOS 14 以上で使えます。</dd>
+    <dd id="faq-mac">Mac 版「スキダネ for Mac」は macOS 14 以上で使えます（日本の Mac App Store で提供しています）。30 日間はすべての機能を無料で試せます。その後も使い続けるには、買い切りの「Pro for Mac」（アプリ内課金）が必要です。Mac 版に広告はありません。</dd>
 
     <dt>アカウントの登録は要りますか？ 端末の間で同期できますか？</dt>
     <dd>スキダネ独自のアカウントはありません。同期は任意で、Google アカウントでログインすると、ご自身の Google ドライブ（このアプリ専用の領域だけ）を使って、フォロー中のサイトや既読・ブックマークなどを同期できます。ドライブのほかのファイルには触れず、運営者が同期のデータを見ることもありません。</dd>
