@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network Field Kit - iPhone・iPad のネットワーク診断アプリ</title>
+<meta name="description" content="現場で「どこで詰まっているか」をすぐ確かめられる。Ping・DNS・速度測定・LAN 探索などを iPhone と iPad だけで。回線の切り分けから記録・報告まで行えるネットワーク診断アプリです。">
+<link rel="canonical" href="https://mayudama.app/network-field-kit/">
+<link rel="alternate" hreflang="ja" href="https://mayudama.app/network-field-kit/">
+<link rel="alternate" hreflang="en" href="https://mayudama.app/network-field-kit/en/">
+<link rel="alternate" hreflang="x-default" href="https://mayudama.app/network-field-kit/en/">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mayudama Factory">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="Network Field Kit - iPhone・iPad のネットワーク診断アプリ">
+<meta property="og:description" content="Ping・DNS・速度測定・LAN 探索などを iPhone と iPad だけで。回線の切り分けから記録・報告まで。">
+<meta property="og:url" content="https://mayudama.app/network-field-kit/">
+<meta property="og:image" content="https://mayudama.app/network-field-kit/assets/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Network Field Kit - iPhone・iPad のネットワーク診断アプリ">
+<meta name="twitter:description" content="Ping・DNS・速度測定・LAN 探索などを iPhone と iPad だけで。回線の切り分けから記録・報告まで。">
+<meta name="twitter:image" content="https://mayudama.app/network-field-kit/assets/ogp.jpg">
+<!--
+  App Store のマーケティング URL（全ローカリゼーション）がこのページを指す。英語版は en/。
+  スクリーンショットの差し替え：assets/shot-1.jpg 〜 shot-4.jpg（英語版は shot-en-N.jpg）を同じ名前で上書きし、alt を直す。
+  元：network-field-kit リポジトリの ios/docs/release/screenshots/<ja|en>/iphone-6.9/ の
+  01-home・04-traceroute・06-speed・07-lan（1320x2868）。書き出しは高さ 1104 の JPEG（508x1104、品質 80）。
+  OGP（assets/ogp.jpg・ogp-en.jpg）：~/development/releases/network-field-kit/store-shots/2.1.0/<ja|en-US>/header/header.png を
+  幅 1200 に縮め、1200x630 の中央に置いたもの。
+  バッジは公式のものを変えずに使う（色・形・縦横比。画面上の高さは 48px、周りの余白は高さの 1/4 以上）。
+-->
+<style>
+  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#2F5D8C; }
+  * { box-sizing:border-box; }
+  [hidden] { display:none !important; }
+  body { margin:0; font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif; color:var(--ink); background:var(--bg); line-height:1.8; }
+  main { max-width:880px; margin:0 auto; padding:56px 16px 80px; }
+  a { color:var(--accent); }
+  .lang { text-align:right; font-size:14px; margin:-32px 0 16px; }
+  .hero { text-align:center; padding-bottom:8px; }
+  .hero img.icon { width:96px; height:96px; border-radius:22px; }
+  h1 { font-size:34px; margin:12px 0 0; letter-spacing:.02em; line-height:1.3; }
+  .catch { font-size:18px; font-weight:700; margin:4px 0 16px; }
+  .lead { max-width:560px; margin:0 auto; color:var(--ink); text-align:left; }
+  .badges { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px 16px; margin:28px 0 8px; }
+  .badges a { display:inline-block; line-height:0; }
+  .badges img { display:block; }
+  .shots { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; margin:40px -16px 0; padding:0 16px 8px; -webkit-overflow-scrolling:touch; }
+  .shots img { flex:0 0 auto; width:62vw; max-width:254px; height:auto; scroll-snap-align:center; border:1px solid var(--line); border-radius:14px; background:#fff; }
+  @media (min-width:760px) {
+    .shots { overflow-x:visible; margin:40px 0 0; padding:0; justify-content:center; }
+    .shots img { flex:1 1 0; width:auto; max-width:200px; }
+  }
+  h2 { font-size:20px; margin:56px 0 16px; padding-top:20px; border-top:1px solid var(--line); }
+  .features { display:grid; grid-template-columns:1fr; gap:12px; }
+  @media (min-width:760px) { .features { grid-template-columns:1fr 1fr; } }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 20px; }
+  .card h3 { font-size:16px; margin:0 0 4px; }
+  .card p { margin:0; font-size:15px; }
+  .faq dt { font-weight:700; margin-top:20px; }
+  .faq dd { margin:4px 0 0; }
+  .note { color:var(--quiet); font-size:13px; line-height:1.7; }
+  footer { margin-top:56px; color:var(--quiet); font-size:13px; border-top:1px solid var(--line); padding-top:16px; }
+  footer p { margin:0 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="en/" hreflang="en" lang="en">English</a></p>
+  <header class="hero">
+    <img class="icon" src="icon.png" width="96" height="96" alt="Network Field Kit のアイコン">
+    <h1>Network Field Kit</h1>
+    <p class="catch">Ping・DNS・速度・LAN の診断</p>
+    <p class="lead">現場で「どこで詰まっているか」を、すぐ確かめる。Network Field Kit は、iPhone と iPad だけで回線の切り分け・記録・報告まで行えるネットワーク診断アプリです。診断機能は無料で、回数の制限もありません。</p>
+    <div class="badges">
+      <a href="https://apps.apple.com/jp/app/id6829382284"><img src="assets/badges/app-store-ja.svg" width="131" height="48" alt="App Store からダウンロード"></a>
+    </div>
+  </header>
+
+  <div class="shots">
+    <img src="assets/shot-1.jpg" width="508" height="1104" loading="lazy" alt="ホーム画面（接続の状態とクイック診断）">
+    <img src="assets/shot-2.jpg" width="508" height="1104" loading="lazy" alt="Traceroute の画面">
+    <img src="assets/shot-3.jpg" width="508" height="1104" loading="lazy" alt="速度測定の画面">
+    <img src="assets/shot-4.jpg" width="508" height="1104" loading="lazy" alt="LAN 機器探索の画面">
+  </div>
+
+  <h2>特長</h2>
+  <div class="features">
+    <div class="card">
+      <h3>クイック診断で、詰まりどころがわかる</h3>
+      <p>リンク → ゲートウェイへの Ping → DNS → インターネット到達性を順に調べ、どこで止まっているかを要約します。まず何を疑えばよいかが、ひと目でわかります。</p>
+    </div>
+    <div class="card">
+      <h3>現場で使うツールをひとまとめに</h3>
+      <p>Ping／TCP Ping、Traceroute／MTR、Path MTU、DNS（レコード種別・リゾルバ比較・DNSSEC）、DoH／DoT、TLS 証明書、HTTP 応答、WHOIS、NTP の時刻のずれ、速度測定、遅延品質、iperf3 まで。</p>
+    </div>
+    <div class="card">
+      <h3>LAN の機器を見つけて、調べる</h3>
+      <p>同じネットワークの機器を探して、メーカー（OUI）とあわせて一覧にします。機器には名前を付けられます。ポートスキャン、サブネット計算、SNMP walk、Wi-Fi のウォークテストも。</p>
+    </div>
+    <div class="card">
+      <h3>テストプランで、受け入れ確認を</h3>
+      <p>Ping・DNS・速度測定など複数の手順を並べて順に実行し、合否の一覧にまとめます。結果は PDF にして、そのまま報告に使えます。</p>
+    </div>
+    <div class="card">
+      <h3>記録して、あとから見返す</h3>
+      <p>定期監視で回線の断を記録し、履歴とブックマークから同じ診断をすぐやり直せます。診断レポートの作成や、ショートカットからの実行にも対応しています。</p>
+    </div>
+    <div class="card">
+      <h3>自前のサーバーなし</h3>
+      <p>運営側のサーバーは持たず、診断結果を開発者が集めることはありません。速度測定は Cloudflare で行い、測定の前に同意をお聞きします。</p>
+    </div>
+  </div>
+
+  <h2>料金</h2>
+  <p>診断機能はすべて無料で、回数の制限もありません。無料版は画面下部にバナー広告が表示されます（測定中は表示しません）。<br>
+  買い切りの「Pro」を購入すると、広告の非表示、結果の CSV／JSON 書き出し、診断レポートとテストプランの PDF（書き出し・共有・印刷）、履歴の件数無制限と検索、ブックマーク・テストプランの無制限の保存と iCloud 同期、機器の名前付けの保存、ホーム画面・ロック画面のウィジェットが使えます。価格は App Store でご確認ください。</p>
+
+  <h2>よくある質問</h2>
+  <dl class="faq">
+    <dt>どの端末で使えますか？</dt>
+    <dd>iOS 18 以上の iPhone と、iPadOS 18 以上の iPad で使えます。</dd>
+
+    <dt>アカウントの登録は要りますか？</dt>
+    <dd>要りません。インストールしてすぐに使えます。Pro の iCloud 同期は任意で、ご自身の iCloud を使います。</dd>
+
+    <dt>Wi-Fi の名前（SSID）が表示されません。</dt>
+    <dd>iOS は、SSID の取得に位置情報の許可（使用中のみ）を求めます。端末の「設定」＞「プライバシーとセキュリティ」＞「位置情報サービス」で Network Field Kit を「このアプリの使用中のみ許可」にしてください。位置情報は記録も送信もしません。</dd>
+
+    <dt>この端末の MAC アドレスや、周りのアクセスポイントは見られますか？</dt>
+    <dd>iOS の制限により、この端末自身の MAC アドレスと周辺のアクセスポイントは取得できません。同じ LAN の機器の MAC アドレスは、端末の ARP の情報から表示します。</dd>
+
+    <dt>速度測定では、どこに通信しますか？</dt>
+    <dd>Cloudflare の測定サーバーに通信します。IP アドレスと測定の通信が Cloudflare に届き、モバイル通信ではデータ量を多く使います。初めて測る前に、内容を説明して同意をお聞きします。</dd>
+
+    <dt>問い合わせ先は？</dt>
+    <dd>network-field-kit-support@mayudama.app へメールでお送りください。よくある質問は<a href="support/">サポート</a>のページにもあります。</dd>
+  </dl>
+
+  <footer>
+    <p><a href="privacy/">プライバシーポリシー</a> ／ <a href="support/">サポート</a> ／ <a href="en/" hreflang="en" lang="en">English</a> ／ <a href="../">Mayudama Factory トップへ</a></p>
+    <p>お問い合わせ：network-field-kit-support@mayudama.app</p>
+    <p class="note">Apple および Apple ロゴは、米国その他の国で登録された Apple Inc. の商標です。App Store は Apple Inc. のサービスマークです。</p>
+    <p>&copy; 2026 Mayudama Factory</p>
+  </footer>
+</main>
+</body>
+</html>
