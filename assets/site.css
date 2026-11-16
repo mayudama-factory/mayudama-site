@@ -52,6 +52,12 @@ a:hover { text-decoration-thickness: 2px; }
 .brand-sep { color: var(--quiet); font-weight: 400; }
 .brand-app { color: var(--ink); font-weight: 700; text-decoration: none; }
 .crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 15px; }
+/* 480px 以下：「/」を消し、アプリ名をロゴの文字の左端（svg 34px + 余白 10px）にそろえて下に置く */
+@media (max-width: 480px) {
+  .crumbs { flex-direction: column; align-items: flex-start; gap: 0; }
+  .crumbs .brand-sep { display: none; }
+  .crumbs .brand-app { margin: -6px 0 0 44px; font-size: 14px; line-height: 1.4; }
+}
 .site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 15px; }
 .site-nav a { color: var(--ink); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
 .site-nav a:hover { text-decoration: underline; }
