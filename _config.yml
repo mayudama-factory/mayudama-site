@@ -1,0 +1,4 @@
+# GitHub Pages（Jekyll）の設定
+# x/ は X の投稿の下書き置き場。サイトには公開しない
+exclude:
+  - x

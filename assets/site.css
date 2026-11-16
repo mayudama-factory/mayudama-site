@@ -175,7 +175,7 @@ a:hover { text-decoration-thickness: 2px; }
 .faq details p { margin: 12px 0 0; font-size: 15px; color: var(--sub); }
 
 /* ---------- 文章のページ（プライバシーポリシー・利用規約・サポートなど） ---------- */
-main.doc { max-width: 760px; margin: 0 auto; padding: 32px 24px 96px; line-height: 1.9; }
+main.doc { max-width: 1120px; margin: 0 auto; padding: 32px 24px 96px; line-height: 1.9; } /* ヘッダー（.wrap）と同じ幅・左右 24px */
 main.doc h1 { margin: 0 0 12px; font-size: clamp(26px, 3.6vw, 36px); font-weight: 900; line-height: 1.4; }
 main.doc .meta { margin: 0 0 40px; font-size: 14px; color: var(--quiet); padding-bottom: 24px; border-bottom: 1px solid var(--line); }
 main.doc h2 { margin: 48px 0 12px; font-size: 20px; font-weight: 900; line-height: 1.5; }
