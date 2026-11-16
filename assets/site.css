@@ -48,11 +48,10 @@ a:hover { text-decoration-thickness: 2px; }
 /* ---------- ヘッダー ---------- */
 .site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px; padding-top: 24px; padding-bottom: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 18px; letter-spacing: .02em; min-height: 44px; }
-.brand svg { flex: none; }
+.brand svg { flex: none; width: 34px; height: 28px; }
 .brand-sep { color: var(--quiet); font-weight: 400; }
 .brand-app { color: var(--ink); font-weight: 700; text-decoration: none; }
 .crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 15px; }
-.crumbs .brand { font-size: 15px; }
 .site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 15px; }
 .site-nav a { color: var(--ink); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
 .site-nav a:hover { text-decoration: underline; }
@@ -90,6 +89,12 @@ a:hover { text-decoration-thickness: 2px; }
 .app-card.nfk      { --c: var(--nfk);  --c-soft: var(--nfk-soft); }
 .app-card.routing  { --c: var(--routing); --c-soft: var(--routing-soft); }
 .app-icon { width: 72px; height: 72px; border-radius: 18px; flex: none; }
+.app-icon-link { display: block; align-self: flex-start; width: 72px; height: 72px; border-radius: 18px; }
+.app-icon-link .app-icon { display: block; }
+@media (prefers-reduced-motion: no-preference) {
+  .app-icon-link { transition: transform .15s ease, box-shadow .15s ease; }
+  .app-icon-link:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(34, 32, 28, .18); }
+}
 .app-icon-placeholder { display: flex; align-items: center; justify-content: center; background: var(--routing-soft); }
 .app-card h3 { margin: 0; font-size: 24px; font-weight: 900; line-height: 1.4; }
 .app-card p.desc { margin: 6px 0 0; font-size: 15px; color: var(--sub); }
