@@ -5,58 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mayudama Factory</title>
 <meta name="description" content="Mayudama Factory（まゆだまファクトリー）は、個人で小さなアプリを作っている工房です。">
-<style>
-  :root { --ink:#2B2B2B; --quiet:#6B6B6B; --line:#E6E2DA; --bg:#FBFAF7; --accent:#F26B5B; }
-  * { box-sizing:border-box; }
-  body { margin:0; font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif; color:var(--ink); background:var(--bg); line-height:1.8; }
-  main { max-width:680px; margin:0 auto; padding:56px 20px 80px; }
-  h1 { font-size:28px; margin:0 0 4px; letter-spacing:.02em; }
-  .sub { color:var(--quiet); margin:0 0 40px; }
-  h2 { font-size:18px; margin:40px 0 12px; }
-  .app { display:flex; gap:16px; align-items:center; padding:16px; border:1px solid var(--line); border-radius:14px; background:#fff; }
-  .app img { width:64px; height:64px; border-radius:14px; }
-  .app h3 { margin:0; font-size:17px; }
-  .app p { margin:2px 0 0; color:var(--quiet); font-size:14px; }
-  .app a { color:var(--accent); font-size:14px; }
-  footer { margin-top:56px; color:var(--quiet); font-size:13px; border-top:1px solid var(--line); padding-top:16px; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<!--
+  デザインは案A「工房のノート」。見た目は /assets/site.css にまとめてある（このページに <style> は置かない）。
+  アプリを足すときは、.app-card を 1 枚コピーして、class（sukidane / nfk / routing の色）とリンクを直す。
+  対応状況のラベル：公開中は <li class="chip">iOS</li>、準備中は <li class="chip soon">Android 準備中</li>。
+-->
 </head>
 <body>
+
+<header class="wrap site-header">
+  <a class="brand" href="/">
+    <svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><path d="M2 25 C 12 21, 22 15, 32 4" fill="none" stroke="#9A8F7C" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="18" r="5" fill="#F26B5B"/><circle cx="19" cy="14" r="4" fill="#2F5D8C"/><circle cx="28" cy="7.5" r="3.5" fill="#3E9B6B"/></svg>
+    <span>Mayudama Factory</span>
+  </a>
+  <nav class="site-nav" aria-label="メイン">
+    <a href="#apps">アプリ</a>
+    <a href="#about">工房について</a>
+    <a class="pill" href="mailto:support@mayudama.app">お問い合わせ</a>
+  </nav>
+</header>
+
 <main>
-  <h1>Mayudama Factory</h1>
-  <p class="sub">個人で小さなアプリを作っている工房です。</p>
-
-  <h2>アプリ</h2>
-  <div class="app">
-    <img src="sukidane/icon.png" alt="スキダネのアイコン">
-    <div>
-      <h3>スキダネ</h3>
-      <p>好きなカテゴリを選ぶだけで、厳選したニュースがまとめて届くRSSリーダー。</p>
-      <a href="sukidane/">紹介ページ</a> ／ <a href="sukidane/privacy/">プライバシーポリシー</a> ／ <a href="sukidane/media/">掲載メディアの方へ</a>
+  <section class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow">INDIE APP STUDIO</p>
+      <h1 class="display">小さくて、<br>ちゃんと使える<br>アプリを。</h1>
+      <p class="lead">Mayudama Factory（まゆだまファクトリー）は、個人で小さなアプリを作っている工房です。毎日の「ちょっと面倒」をひとつずつ減らす道具を、ていねいに作っています。</p>
+      <div class="hero-actions">
+        <a class="btn" href="#apps">アプリを見る<svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
     </div>
-  </div>
-
-  <div class="app" style="margin-top:12px">
-    <img src="network-field-kit/icon.png" alt="Network Field Kit のアイコン">
-    <div>
-      <h3>Network Field Kit</h3>
-      <p>iPhone・iPad 向けのネットワーク診断アプリ。Ping、DNS、速度測定、LAN 探索などを現場で。</p>
-      <a href="network-field-kit/">紹介ページ</a> ／ <a href="network-field-kit/privacy/">プライバシーポリシー</a> ／ <a href="network-field-kit/support/">サポート</a>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 380 340"><path d="M10 320 C 120 280, 230 180, 370 30" fill="none" stroke="#C9BFAE" stroke-width="2" stroke-linecap="round"/><path d="M150 248 C 170 280, 200 300, 236 306" fill="none" stroke="#C9BFAE" stroke-width="2" stroke-linecap="round"/><circle cx="96" cy="236" r="62" fill="#F26B5B"/><circle cx="214" cy="160" r="46" fill="#2F5D8C"/><circle cx="300" cy="86" r="34" fill="#3E9B6B"/><circle cx="250" cy="296" r="24" fill="#E8C468"/><circle cx="352" cy="38" r="14" fill="#E4DCCD"/></svg>
     </div>
-  </div>
+  </section>
 
-  <div class="app" style="margin-top:12px">
-    <div>
-      <h3>ルーティング！</h3>
-      <p>パズルで覚えるネットワークの仕組み。ルータやスイッチを置いて配線し、パケットを届けるパズルゲーム。</p>
-      <a href="routing/privacy/">プライバシーポリシー</a>
+  <section id="apps" class="wrap section" aria-labelledby="apps-title">
+    <div class="section-head">
+      <h2 id="apps-title" class="section-title">アプリ</h2>
+      <p class="count">3 APPS</p>
     </div>
-  </div>
+    <div class="app-grid">
 
-  <footer>
-    お問い合わせ：support@mayudama.app<br>
-    &copy; 2026 Mayudama Factory
-  </footer>
+      <article class="app-card sukidane">
+        <img class="app-icon" src="sukidane/icon.png" width="72" height="72" alt="スキダネのアイコン">
+        <div>
+          <h3>スキダネ</h3>
+          <p class="desc">好きなカテゴリを選ぶだけで、厳選したニュースがまとめて届くRSSリーダー。</p>
+          <ul class="chips" aria-label="対応している端末">
+            <li class="chip">iOS</li>
+            <li class="chip">Android</li>
+            <li class="chip soon">Mac 準備中</li>
+            <li class="chip soon">Windows 準備中</li>
+          </ul>
+        </div>
+        <div class="app-card-links">
+          <a class="more" href="sukidane/">紹介ページ<svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <p class="sublinks"><a href="sukidane/privacy/">プライバシーポリシー</a><a href="sukidane/media/">掲載メディアの方へ</a></p>
+        </div>
+      </article>
+
+      <article class="app-card nfk">
+        <img class="app-icon" src="network-field-kit/icon.png" width="72" height="72" alt="Network Field Kit のアイコン">
+        <div>
+          <h3>Network Field Kit</h3>
+          <p class="desc">iPhone・iPad 向けのネットワーク診断アプリ。Ping、DNS、速度測定、LAN 探索などを現場で。</p>
+          <ul class="chips" aria-label="対応している端末">
+            <li class="chip">iOS</li>
+            <li class="chip soon">Android 準備中</li>
+          </ul>
+        </div>
+        <div class="app-card-links">
+          <a class="more" href="network-field-kit/">紹介ページ<svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <p class="sublinks"><a href="network-field-kit/privacy/">プライバシーポリシー</a><a href="network-field-kit/support/">サポート</a></p>
+        </div>
+      </article>
+
+      <article class="app-card routing">
+        <div class="app-icon app-icon-placeholder" role="img" aria-label="ルーティング！のアイコン">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#2F7D5B" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="10" height="10" rx="2"/><rect x="26" y="4" width="10" height="10" rx="2"/><rect x="15" y="26" width="10" height="10" rx="2"/><path d="M14 9h12M9 14v6h11v6M31 14v6h-11"/></svg>
+        </div>
+        <div>
+          <h3>ルーティング！</h3>
+          <p class="desc">パズルで覚えるネットワークの仕組み。ルータやスイッチを置いて配線し、パケットを届けるパズルゲーム。</p>
+          <ul class="chips" aria-label="対応している端末">
+            <li class="chip soon">iOS 準備中</li>
+            <li class="chip soon">Android 準備中</li>
+          </ul>
+        </div>
+        <div class="app-card-links">
+          <p class="sublinks"><a href="routing/privacy/">プライバシーポリシー</a></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="about" class="band" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div class="about-text">
+        <h2 id="about-title">工房について</h2>
+        <p>Mayudama Factory は、企画からデザイン、開発、サポートまでをひとりで手がける個人のアプリ工房です。運営側のサーバーを持たず、データは端末の中で扱う作りを大切にしています。</p>
+      </div>
+      <div class="contact-card">
+        <h3>お問い合わせ</h3>
+        <a class="mail" href="mailto:support@mayudama.app">support@mayudama.app</a>
+        <p>アプリごとの窓口は、各アプリの紹介ページに載せています。</p>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Mayudama Factory</p>
+    <p>個人で小さなアプリを作っている工房です。</p>
+  </div>
+</footer>
+
 </body>
 </html>
