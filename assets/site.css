@@ -18,6 +18,7 @@
   --suki: #A43C30;      --suki-soft: #FDECE9;    --suki-deep: #7E2C23;
   --nfk: #24496E;       --nfk-soft: #E8EEF5;     --nfk-deep: #1E3550;
   --routing: #245F45;   --routing-soft: #E4F1EA; --routing-deep: #1B4734;
+  --netsim: #5B3F8C;    --netsim-soft: #EEE9F6;  --netsim-deep: #3F2B66;
 
   --accent: var(--ink);
   --accent-soft: var(--band);
@@ -31,6 +32,7 @@
 body.app-sukidane { --accent: var(--suki); --accent-soft: var(--suki-soft); --accent-deep: var(--suki-deep); }
 body.app-nfk      { --accent: var(--nfk);  --accent-soft: var(--nfk-soft);  --accent-deep: var(--nfk-deep); }
 body.app-routing  { --accent: var(--routing); --accent-soft: var(--routing-soft); --accent-deep: var(--routing-deep); }
+body.app-netsim   { --accent: var(--netsim); --accent-soft: var(--netsim-soft); --accent-deep: var(--netsim-deep); }
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -190,3 +192,17 @@ main.doc th { background: var(--white); }
 main.doc > footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--quiet); font-size: 13px; }
 main.doc > footer a { color: var(--ink); }
 .app-card .chips { margin-top: 14px; }
+
+/* ---------- ネットワーク演習シミュレータ（network-sim）：配布ページの部品 ---------- */
+.shots.shots-soon { padding-bottom: 0; }
+.shots-soon .shot-soon { flex: 1 1 auto; max-width: 520px; min-height: 300px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius); border: 1px dashed #B4AA98; background: var(--white); color: var(--quiet); font-size: 15px; text-align: center; padding: 24px; }
+.dl-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.dl-buttons .btn { white-space: nowrap; }
+.dl-note { margin: 14px 0 0; font-size: 14px; color: var(--quiet); }
+.dl-note a { color: var(--ink); }
+.spec-list { margin: 0; padding-left: 1.4em; font-size: 15px; color: var(--sub); }
+.spec-list li + li { margin-top: 6px; }
+.fine { margin: 20px 0 0; font-size: 12px; color: var(--quiet); line-height: 1.7; }
+.fine a, .lp-section p a { color: var(--accent); }
+.lp-section .body-text { margin: 0 0 16px; font-size: 15px; color: var(--sub); max-width: 720px; }
+.lp-section .body-text:last-child { margin-bottom: 0; }

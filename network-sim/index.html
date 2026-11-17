@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ネットワーク演習シミュレータ（仮） - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト</title>
+<meta name="description" content="新人が L2／L3 のネットワークを Cisco 風の CLI で設定して学ぶ、演習ソフトです。Windows・Mac 向け。インストール不要で、無償で使えます。">
+<link rel="canonical" href="https://mayudama.app/network-sim/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mayudama Factory">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="ネットワーク演習シミュレータ（仮） - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト">
+<meta property="og:description" content="新人が L2／L3 のネットワークを Cisco 風の CLI で設定して学ぶ、演習ソフト。Windows・Mac 向け。インストール不要・無償。">
+<meta property="og:url" content="https://mayudama.app/network-sim/">
+<meta property="og:image" content="https://mayudama.app/brand/og/ogp-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ネットワーク演習シミュレータ（仮） - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト">
+<meta name="twitter:description" content="新人が L2／L3 のネットワークを Cisco 風の CLI で設定して学ぶ、演習ソフト。Windows・Mac 向け。インストール不要・無償。">
+<meta name="twitter:image" content="https://mayudama.app/brand/og/ogp-1200x630.png">
+<!--
+  画面イメージの差し替え：<div class="shots shots-soon"> の中の <div class="shot-soon">…</div> を消し、
+  <img src="assets/shot-1.png" width="…" height="…" alt="…"> を並べる。あわせて class の shots-soon を外す（.shots は既存の部品）。
+  実際のアプリの画面だけを使う（実在しない CLI の出力・画面は載せない）。
+
+  版の表記（0.5.0・公開日）は、下の id="release-info" の 1 か所だけ。新しい版を出したらここだけ直す。
+  ダウンロードのリンクは版なしの固定 URL（releases/latest/download/…）のまま。書き換えない。
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+<meta name="twitter:site" content="@MayudamaFactory">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="app-netsim">
+
+<header class="wrap site-header">
+  <nav class="crumbs" aria-label="サイト"><a class="brand" href="/"><svg viewBox="0 0 34 28" aria-hidden="true"><path d="M2 25 C 12 21, 22 15, 32 4" fill="none" stroke="#9A8F7C" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="18" r="5" fill="#F26B5B"/><circle cx="19" cy="14" r="4" fill="#2F5D8C"/><circle cx="28" cy="7.5" r="3.5" fill="#3E9B6B"/></svg><span>Mayudama Factory</span></a><span class="brand-sep" aria-hidden="true">/</span><a class="brand-app" href="/network-sim/">ネットワーク演習シミュレータ</a></nav>
+</header>
+
+<main>
+  <section class="wrap lp-hero">
+    <div class="lp-hero-text">
+      <h1 class="tagline">ネットワーク演習<br>シミュレータ（仮）</h1>
+      <p class="lead">新人が L2／L3 のネットワークを Cisco 風の CLI で設定して学ぶ、演習ソフトです。Windows・Mac 向け。インストール不要で、無償で使えます。開発は Mayudama Factory です。</p>
+      <ul class="chips platforms" aria-label="対応している端末">
+        <li class="chip">Windows</li>
+        <li class="chip">Mac</li>
+      </ul>
+    </div>
+    <div class="shots shots-soon">
+      <div class="shot-soon">画面イメージは準備中です</div>
+    </div>
+  </section>
+
+  <section id="features" class="band-white" aria-labelledby="features-title">
+    <div class="wrap lp-section">
+      <h2 id="features-title" class="section-title">できること</h2>
+      <div class="price-grid">
+        <div class="price-card">
+          <p class="label">課題モード</p>
+          <p>課題 1〜16 と 5.5。組む → 採点 → 壊れる → ヒントを見て直す。</p>
+        </div>
+        <div class="price-card">
+          <p class="label">自由構成モード</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="audience" class="wrap lp-section" aria-labelledby="audience-title">
+    <h2 id="audience-title" class="section-title">対象の人</h2>
+    <p class="body-text">新人（L2／L3 のネットワークを CLI で設定して学びたい人）。</p>
+  </section>
+
+  <section id="download" class="band-white" aria-labelledby="download-title">
+    <div class="wrap lp-section">
+      <h2 id="download-title" class="section-title">ダウンロード</h2>
+      <div class="dl-buttons">
+        <a class="btn" href="https://github.com/mayudama-factory/network-sim-dist/releases/latest/download/network-sim-windows.zip">Windows 版をダウンロード</a>
+        <a class="btn" href="https://github.com/mayudama-factory/network-sim-dist/releases/latest/download/network-sim-macos.zip">Mac 版をダウンロード</a>
+      </div>
+      <p class="dl-note" id="release-info">版 0.5.0（2026-11-18 公開）</p>
+      <p class="dl-note"><a href="https://github.com/mayudama-factory/network-sim-dist/releases">リリース一覧</a></p>
+    </div>
+  </section>
+
+  <section id="requirements" class="wrap lp-section" aria-labelledby="requirements-title">
+    <h2 id="requirements-title" class="section-title">動作環境</h2>
+    <ul class="spec-list">
+      <li>Windows：Windows 10 以降（64 ビット）</li>
+      <li>Mac：macOS 12 以降（Apple シリコン・Intel の両対応）</li>
+    </ul>
+  </section>
+
+  <section id="howto" class="band-white" aria-labelledby="howto-title">
+    <div class="wrap lp-section">
+      <h2 id="howto-title" class="section-title">使い方と初回の警告</h2>
+      <p class="body-text">zip を展開し、Windows は network_sim.exe、Mac は network_sim.app を起動します。インストールは不要です。</p>
+      <p class="body-text">このソフトには電子署名（Windows）・Apple の公証（Mac）がないため、初回起動時に警告が出ることがあります。</p>
+      <ul class="spec-list">
+        <li>Windows：SmartScreen の「詳細情報」→「実行」</li>
+        <li>Mac：「プライバシーとセキュリティ」の「このまま開く」。または Control キーを押しながら開く</li>
+      </ul>
+      <p class="body-text" style="margin-top:16px">詳しい手順は、zip の中の README.txt を見てください。</p>
+    </div>
+  </section>
+
+  <section id="terms" class="wrap lp-section" aria-labelledby="terms-title">
+    <h2 id="terms-title" class="section-title">利用条件</h2>
+    <ul class="spec-list">
+      <li>無償で使えます（個人の学習・会社の研修での利用を含みます）。</li>
+      <li>配布された zip を、中身を変えずにそのまま人に渡すのは自由です。改変したものの配布と販売はできません。</li>
+      <li>無保証です。このソフトを使ったことで生じた損害について、開発者は責任を負いません。</li>
+    </ul>
+    <p class="body-text" style="margin-top:16px">利用条件の正本は<a href="https://github.com/mayudama-factory/network-sim-dist">配布用リポジトリ</a>の README です。</p>
+    <p class="fine">Cisco・Catalyst など、このソフトに出てくる製品名・社名は各社の商標または登録商標です。このソフトは各社と関係がなく、各社の製品の動作を正確に再現するものではありません。</p>
+  </section>
+
+  <section id="contact" class="band" aria-labelledby="contact-title">
+    <div class="wrap about">
+      <div class="contact-card">
+        <h3 id="contact-title">お問い合わせ</h3>
+        <a class="mail" href="mailto:support@mayudama.app">support@mayudama.app</a>
+        <p>不具合やご意見の窓口です。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-links"><a href="../">Mayudama Factory トップへ</a></p>
+    <p class="footer-x">X: <a href="https://x.com/MayudamaFactory" rel="me noopener" target="_blank">@MayudamaFactory</a></p>
+    <p>&copy; 2026 Mayudama Factory</p>
+  </div>
+</footer>
+
+</body>
+</html>
