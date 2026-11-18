@@ -95,7 +95,6 @@ a:hover { text-decoration-thickness: 2px; }
 .app-card { background: var(--white); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; gap: 18px; }
 .app-card.sukidane { --c: var(--suki); --c-soft: var(--suki-soft); }
 .app-card.nfk      { --c: var(--nfk);  --c-soft: var(--nfk-soft); }
-.app-card.routing  { --c: var(--routing); --c-soft: var(--routing-soft); }
 .app-icon { width: 72px; height: 72px; border-radius: 18px; flex: none; }
 .app-icon-link { display: block; align-self: flex-start; width: 72px; height: 72px; border-radius: 18px; }
 .app-icon-link .app-icon { display: block; }
@@ -103,7 +102,6 @@ a:hover { text-decoration-thickness: 2px; }
   .app-icon-link { transition: transform .15s ease, box-shadow .15s ease; }
   .app-icon-link:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(34, 32, 28, .18); }
 }
-.app-icon-placeholder { display: flex; align-items: center; justify-content: center; background: var(--routing-soft); }
 .app-card h3 { margin: 0; font-size: 24px; font-weight: 900; line-height: 1.4; }
 .app-card p.desc { margin: 6px 0 0; font-size: 15px; color: var(--sub); }
 .app-card-links { margin-top: auto; display: flex; flex-direction: column; gap: 6px; }
