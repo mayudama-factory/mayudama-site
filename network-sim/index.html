@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://mayudama.app/brand/og/ogp-1200x630.png">
 <!--
   差し替え手順
-  - 画面写真：network-sim/assets/shot-1.jpg（ヒーロー）と shot-2〜6.jpg（「スクリーンイメージ」の <figure>）。
+  - 画面写真：network-sim/assets/shot-1〜6.jpg（すべて 1600x1000）。「スクリーンイメージ」の <figure>。押すと /assets/lightbox.js のポップアップで開く（data-lightbox を付けた要素の中の a が対象）。
     同じ名前で上書きするか、<img> の src・width・height・alt と <figcaption> を直す。画像を足したら <figure> を 1 つ足す（格子は 2 列・スマホ 1 列）。
     実際のアプリの画面だけを使う（実在しない CLI の出力・画面は載せない）。アイコンは network-sim/icon.png。
   - 版の表記（版の番号・公開日）は、「ダウンロード」の id="release-info" の 1 か所だけ。新しい版を出したらここだけ直す。
@@ -37,6 +37,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/lightbox.js" defer></script>
 </head>
 <body class="app-netsim">
 
@@ -55,9 +56,6 @@
         <li class="chip">Mac</li>
       </ul>
       <div class="hero-actions"><a class="btn" href="#download">ダウンロード</a></div>
-    </div>
-    <div class="lp-shot">
-      <img src="assets/shot-1.jpg" width="1600" height="646" alt="DHCP でアドレスを配る課題の画面。左に構成図、右に PC のコマンド画面で ipconfig /all の結果が表示されている">
     </div>
   </section>
 
@@ -99,13 +97,17 @@
   <section id="screens" class="band-white" aria-labelledby="screens-title">
     <div class="wrap lp-section">
       <h2 id="screens-title" class="section-title">スクリーンイメージ</h2>
-      <div class="shot-grid">
+      <div class="shot-grid" data-lightbox>
+        <figure class="shot-fig">
+          <a href="assets/shot-1.jpg"><img src="assets/shot-1.jpg" width="1600" height="1000" loading="lazy" alt="DHCP でアドレスを配る課題の画面。左に構成図、右に PC のコマンド画面で ipconfig /all の結果が表示されている"></a>
+          <figcaption>DHCP の課題。構成図と、PC のコマンド画面（ipconfig /all）です。</figcaption>
+        </figure>
         <figure class="shot-fig">
           <a href="assets/shot-2.jpg"><img src="assets/shot-2.jpg" width="1600" height="1000" loading="lazy" alt="最初の課題の画面。スイッチの CLI で show vlan を実行し、VLAN の一覧が表示されている"></a>
           <figcaption>スイッチの CLI。show vlan などの確認コマンドが使えます。</figcaption>
         </figure>
         <figure class="shot-fig">
-          <a href="assets/shot-3.jpg"><img src="assets/shot-3.jpg" width="1600" height="1300" loading="lazy" alt="パケットのステップ実行の画面。ヘッダの変化と、機器ごとの判断のログが表示されている"></a>
+          <a href="assets/shot-3.jpg"><img src="assets/shot-3.jpg" width="1600" height="1000" loading="lazy" alt="パケットのステップ実行の画面。ヘッダの変化と、機器ごとの判断のログが表示されている"></a>
           <figcaption>パケットのステップ実行。ヘッダの変化と、機器ごとの判断を追えます。</figcaption>
         </figure>
         <figure class="shot-fig">
