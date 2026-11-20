@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="/assets/site.css">
 <!--
   デザインは案A「工房のノート」。見た目は /assets/site.css にまとめてある（このページに <style> は置かない）。
-  アプリを足すときは、.app-card を 1 枚コピーして、class（sukidane / nfk の色）とリンクを直す。
+  アプリを足すときは、.app-card を 1 枚コピーして、class（sukidane / nfk / netsim の色）とリンクを直す。
   対応状況のラベル：公開中は <li class="chip">iOS</li>、準備中は <li class="chip soon">Android 準備中</li>。
 -->
 </head>
@@ -61,7 +61,7 @@
   <section id="apps" class="wrap section" aria-labelledby="apps-title">
     <div class="section-head">
       <h2 id="apps-title" class="section-title">アプリ</h2>
-      <p class="count">2 APPS</p>
+      <p class="count">3 APPS</p>
     </div>
     <div class="app-grid">
 
@@ -96,6 +96,22 @@
         <div class="app-card-links">
           <a class="more" href="network-field-kit/">紹介ページ<svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           <p class="sublinks"><a href="network-field-kit/privacy/">プライバシーポリシー</a><a href="network-field-kit/support/">サポート</a></p>
+        </div>
+      </article>
+
+      <article class="app-card netsim">
+        <a class="app-icon-link" href="network-sim/" tabindex="-1" aria-hidden="true"><img class="app-icon" src="network-sim/icon.png" width="72" height="72" alt=""></a>
+        <div>
+          <h3>ネットワーク構築シミュレータ</h3>
+          <p class="desc">新人が L2／L3 のネットワークを、Cisco 風の CLI で組んで・壊して・直して学ぶ演習ソフト。無償。</p>
+          <ul class="chips" aria-label="対応している端末">
+            <li class="chip">Windows</li>
+            <li class="chip">Mac</li>
+          </ul>
+        </div>
+        <div class="app-card-links">
+          <a class="more" href="network-sim/">紹介ページ<svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <p class="sublinks"><a href="network-sim/#download">ダウンロード</a></p>
         </div>
       </article>
 
