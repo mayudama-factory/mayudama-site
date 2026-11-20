@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-adsense-account" content="ca-pub-1105812498519245">
-<title>Network Field Kit - iPhone・iPad のネットワーク診断アプリ</title>
-<meta name="description" content="現場で「どこで詰まっているか」をすぐ確かめられる。Ping・DNS・速度測定・LAN 探索などを iPhone と iPad だけで。回線の切り分けから記録・報告まで行えるネットワーク診断アプリです。">
+<title>Network Field Kit - iPhone・iPad・Android のネットワーク診断アプリ</title>
+<meta name="description" content="現場で「どこで詰まっているか」をすぐ確かめられる。Ping・DNS・速度測定・LAN 探索などを iPhone・iPad・Android の端末だけで。回線の切り分けから記録・報告まで行えるネットワーク診断アプリです。">
 <link rel="canonical" href="https://mayudama.app/network-field-kit/">
 <link rel="alternate" hreflang="ja" href="https://mayudama.app/network-field-kit/">
 <link rel="alternate" hreflang="en" href="https://mayudama.app/network-field-kit/en/">
@@ -13,16 +13,17 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mayudama Factory">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="Network Field Kit - iPhone・iPad のネットワーク診断アプリ">
-<meta property="og:description" content="Ping・DNS・速度測定・LAN 探索などを iPhone と iPad だけで。回線の切り分けから記録・報告まで。">
+<meta property="og:title" content="Network Field Kit - iPhone・iPad・Android のネットワーク診断アプリ">
+<meta property="og:description" content="Ping・DNS・速度測定・LAN 探索などを iPhone・iPad・Android の端末だけで。回線の切り分けから記録・報告まで。">
 <meta property="og:url" content="https://mayudama.app/network-field-kit/">
 <meta property="og:image" content="https://mayudama.app/network-field-kit/assets/ogp.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Network Field Kit - iPhone・iPad のネットワーク診断アプリ">
-<meta name="twitter:description" content="Ping・DNS・速度測定・LAN 探索などを iPhone と iPad だけで。回線の切り分けから記録・報告まで。">
+<meta name="twitter:title" content="Network Field Kit - iPhone・iPad・Android のネットワーク診断アプリ">
+<meta name="twitter:description" content="Ping・DNS・速度測定・LAN 探索などを iPhone・iPad・Android の端末だけで。回線の切り分けから記録・報告まで。">
 <meta name="twitter:image" content="https://mayudama.app/network-field-kit/assets/ogp.jpg">
 <!--
   App Store のマーケティング URL（全ローカリゼーション）がこのページを指す。英語版は en/。
+  Google Play のストアの掲載情報（ウェブサイト）にも、このページの URL（日本語は https://mayudama.app/network-field-kit/、英語は /en/）を使う。
   スクリーンショットの差し替え：assets/shot-1.jpg 〜 shot-4.jpg（英語版は shot-en-N.jpg）を同じ名前で上書きし、alt を直す。
   元：network-field-kit リポジトリの ios/docs/release/screenshots/<ja|en>/iphone-6.9/ の
   01-home・04-traceroute・06-speed・07-lan（1320x2868）。書き出しは高さ 1104 の JPEG（508x1104、品質 80）。
@@ -60,13 +61,14 @@
       </div>
       <p class="catch">Ping・DNS・速度・LAN の診断</p>
       <p class="tagline">現場で「どこで詰まっているか」を、<br>すぐ確かめる。</p>
-      <p class="lead">Network Field Kit は、iPhone と iPad だけで回線の切り分け・記録・報告まで行えるネットワーク診断アプリです。診断機能は無料で、回数の制限もありません。</p>
+      <p class="lead">Network Field Kit は、iPhone・iPad・Android の端末だけで回線の切り分け・記録・報告まで行えるネットワーク診断アプリです。診断機能は無料で、回数の制限もありません。</p>
       <div class="badges">
         <a href="https://apps.apple.com/jp/app/id6829382284"><img src="assets/badges/app-store-ja.svg" width="131" height="48" alt="App Store からダウンロード"></a>
+        <a href="https://play.google.com/store/apps/details?id=app.mayudama.networkfieldkit&amp;hl=ja"><img src="assets/badges/google-play-ja.png" width="163" height="63" alt="Google Play で手に入れよう"></a>
       </div>
       <ul class="chips platforms" aria-label="対応している端末">
         <li class="chip">iOS</li>
-        <li class="chip soon">Android 準備中</li>
+        <li class="chip">Android</li>
       </ul>
     </div>
     <div class="shots">
@@ -94,7 +96,7 @@
         <div class="feature">
           <span class="num">03</span>
           <h3>LAN の機器を見つけて、調べる</h3>
-          <p>同じネットワークの機器を探して、メーカー（OUI）とあわせて一覧にします。機器には名前を付けられます。ポートスキャン、サブネット計算、SNMP walk、Wi-Fi のウォークテストも。</p>
+          <p>同じネットワークの機器を探して一覧にします。機器には名前を付けられます。iOS では、取得できた MAC アドレスからメーカー（OUI）も表示します（Android は他の機器の MAC アドレスを取得できないため、メーカーは表示しません）。ポートスキャン、サブネット計算、SNMP walk、Wi-Fi のウォークテストも。</p>
         </div>
         <div class="feature">
           <span class="num">04</span>
@@ -124,7 +126,7 @@
       </div>
       <div class="price-card pro">
         <p class="label">Pro（買い切り）</p>
-        <p>買い切りの「Pro」を購入すると、広告の非表示、結果の CSV／JSON 書き出し、診断レポートとテストプランの PDF（書き出し・共有・印刷）、履歴の件数無制限と検索、ブックマーク・テストプランの無制限の保存と iCloud 同期、機器の名前付けの保存、ホーム画面・ロック画面のウィジェットが使えます。価格は App Store でご確認ください。</p>
+        <p>買い切りの「Pro」を購入すると、広告の非表示、結果の CSV／JSON 書き出し、診断レポートとテストプランの PDF（書き出し・共有・印刷）、履歴の件数無制限と検索、ブックマーク・テストプランの無制限の保存と同期（iOS は iCloud、Android は Google ドライブ）、機器の名前付けの保存、ホーム画面のウィジェット（ロック画面のウィジェットは iOS のみ）が使えます。価格は App Store・Google Play でご確認ください。</p>
       </div>
     </div>
   </section>
@@ -134,19 +136,19 @@
     <div class="faq">
       <details open>
         <summary>どの端末で使えますか？</summary>
-        <p>iOS 18 以上の iPhone と、iPadOS 18 以上の iPad で使えます。</p>
+        <p>iOS 18 以上の iPhone、iPadOS 18 以上の iPad、Android 10 以上のスマートフォン・タブレットで使えます。</p>
       </details>
       <details>
         <summary>アカウントの登録は要りますか？</summary>
-        <p>要りません。インストールしてすぐに使えます。Pro の iCloud 同期は任意で、ご自身の iCloud を使います。</p>
+        <p>要りません。インストールしてすぐに使えます。Pro の同期は任意で、iOS ではご自身の iCloud、Android ではご自身の Google ドライブ（このアプリ専用の領域だけ）を使います。</p>
       </details>
       <details>
         <summary>Wi-Fi の名前（SSID）が表示されません。</summary>
-        <p>iOS は、SSID の取得に位置情報の許可（使用中のみ）を求めます。端末の「設定」＞「プライバシーとセキュリティ」＞「位置情報サービス」で Network Field Kit を「このアプリの使用中のみ許可」にしてください。位置情報は記録も送信もしません。</p>
+        <p>iOS・Android とも、SSID の取得に位置情報の許可（使用中のみ）が要ります。iOS は、端末の「設定」＞「プライバシーとセキュリティ」＞「位置情報サービス」で Network Field Kit を「このアプリの使用中のみ許可」にしてください。Android は、端末の「設定」の、このアプリの権限（位置情報）を許可し、端末の位置情報もオンにしてください（「おおよその位置」だけでは SSID を読めません）。位置情報は記録も送信もしません。</p>
       </details>
       <details>
         <summary>この端末の MAC アドレスや、周りのアクセスポイントは見られますか？</summary>
-        <p>iOS の制限により、この端末自身の MAC アドレスと周辺のアクセスポイントは取得できません。同じ LAN の機器の MAC アドレスは、端末の ARP の情報から表示します。</p>
+        <p>この端末自身の MAC アドレスと周辺のアクセスポイントは、iOS・Android のどちらの制限でも取得できません。同じ LAN の他の機器の MAC アドレスは、iOS では端末の ARP の情報から表示します。Android では取得できません。</p>
       </details>
       <details>
         <summary>速度測定では、どこに通信しますか？</summary>
@@ -164,7 +166,7 @@
   <div class="wrap">
     <p class="footer-links"><a href="privacy/">プライバシーポリシー</a> ／ <a href="support/">サポート</a> ／ <a href="en/" hreflang="en" lang="en">English</a> ／ <a href="../">Mayudama Factory トップへ</a></p>
     <p>お問い合わせ：network-field-kit-support@mayudama.app</p>
-    <p class="note">Apple および Apple ロゴは、米国その他の国で登録された Apple Inc. の商標です。App Store は Apple Inc. のサービスマークです。</p>
+    <p class="note">Apple および Apple ロゴは、米国その他の国で登録された Apple Inc. の商標です。App Store は Apple Inc. のサービスマークです。Google Play および Google Play ロゴは Google LLC の商標です。</p>
     <p class="footer-x">X: <a href="https://x.com/MayudamaFactory" rel="me noopener" target="_blank">@MayudamaFactory</a></p>
     <p>&copy; 2026 Mayudama Factory</p>
   </div>
