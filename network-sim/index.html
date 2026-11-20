@@ -4,27 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-adsense-account" content="ca-pub-1105812498519245">
-<title>ネットワーク演習シミュレータ（仮） - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト</title>
+<title>ネットワーク構築シミュレータ - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト</title>
 <meta name="description" content="新人が L2／L3 のネットワークを Cisco 風の CLI で設定して学ぶ、演習ソフトです。Windows・Mac 向け。インストール不要で、無償で使えます。">
 <link rel="canonical" href="https://mayudama.app/network-sim/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mayudama Factory">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="ネットワーク演習シミュレータ（仮） - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト">
+<meta property="og:title" content="ネットワーク構築シミュレータ - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト">
 <meta property="og:description" content="新人が L2／L3 のネットワークを Cisco 風の CLI で設定して学ぶ、演習ソフト。Windows・Mac 向け。インストール不要・無償。">
 <meta property="og:url" content="https://mayudama.app/network-sim/">
 <meta property="og:image" content="https://mayudama.app/brand/og/ogp-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ネットワーク演習シミュレータ（仮） - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト">
+<meta name="twitter:title" content="ネットワーク構築シミュレータ - Cisco 風 CLI で学ぶ L2／L3 の演習ソフト">
 <meta name="twitter:description" content="新人が L2／L3 のネットワークを Cisco 風の CLI で設定して学ぶ、演習ソフト。Windows・Mac 向け。インストール不要・無償。">
 <meta name="twitter:image" content="https://mayudama.app/brand/og/ogp-1200x630.png">
 <!--
-  画面イメージの差し替え：<div class="shots shots-soon"> の中の <div class="shot-soon">…</div> を消し、
-  <img src="assets/shot-1.png" width="…" height="…" alt="…"> を並べる。あわせて class の shots-soon を外す（.shots は既存の部品）。
-  実際のアプリの画面だけを使う（実在しない CLI の出力・画面は載せない）。
-
-  版の表記（0.5.0・公開日）は、下の id="release-info" の 1 か所だけ。新しい版を出したらここだけ直す。
-  ダウンロードのリンクは版なしの固定 URL（releases/latest/download/…）のまま。書き換えない。
+  差し替え手順
+  - 画面写真：network-sim/assets/shot-1.jpg（ヒーロー）と shot-2〜6.jpg（「スクリーンイメージ」の <figure>）。
+    同じ名前で上書きするか、<img> の src・width・height・alt と <figcaption> を直す。画像を足したら <figure> を 1 つ足す（格子は 2 列・スマホ 1 列）。
+    実際のアプリの画面だけを使う（実在しない CLI の出力・画面は載せない）。アイコンは network-sim/icon.png。
+  - 版の表記（版の番号・公開日）は、「ダウンロード」の id="release-info" の 1 か所だけ。新しい版を出したらここだけ直す。
+    ほかに版を書くのは「お知らせ」（その版の公開の記録）と「今後の予定」。お知らせは新しい版の分に差し替える。
+  - ダウンロードのリンクは版なしの固定 URL（releases/latest/download/…）のまま。書き換えない。
+  - 「学べること」はテーマの一覧で、課題の番号は書かない（版で番号が変わっても直さずに済む）。課題が増えたら本数とテーマを直す。
+  - 「今後の予定」には日付を書かない。
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,52 +41,149 @@
 <body class="app-netsim">
 
 <header class="wrap site-header">
-  <nav class="crumbs" aria-label="サイト"><a class="brand" href="/"><svg viewBox="0 0 34 28" aria-hidden="true"><path d="M2 25 C 12 21, 22 15, 32 4" fill="none" stroke="#9A8F7C" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="18" r="5" fill="#F26B5B"/><circle cx="19" cy="14" r="4" fill="#2F5D8C"/><circle cx="28" cy="7.5" r="3.5" fill="#3E9B6B"/></svg><span>Mayudama Factory</span></a><span class="brand-sep" aria-hidden="true">/</span><a class="brand-app" href="/network-sim/">ネットワーク演習シミュレータ</a></nav>
+  <nav class="crumbs" aria-label="サイト"><a class="brand" href="/"><svg viewBox="0 0 34 28" aria-hidden="true"><path d="M2 25 C 12 21, 22 15, 32 4" fill="none" stroke="#9A8F7C" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="18" r="5" fill="#F26B5B"/><circle cx="19" cy="14" r="4" fill="#2F5D8C"/><circle cx="28" cy="7.5" r="3.5" fill="#3E9B6B"/></svg><span>Mayudama Factory</span></a><span class="brand-sep" aria-hidden="true">/</span><a class="brand-app" href="/network-sim/">ネットワーク構築シミュレータ</a></nav>
 </header>
 
 <main>
   <section class="wrap lp-hero">
     <div class="lp-hero-text">
-      <h1 class="tagline">ネットワーク演習<br>シミュレータ（仮）</h1>
-      <p class="lead">新人が L2／L3 のネットワークを Cisco 風の CLI で設定して学ぶ、演習ソフトです。Windows・Mac 向け。インストール不要で、無償で使えます。開発は Mayudama Factory です。</p>
+      <img class="ns-icon" src="icon.png" width="64" height="64" alt="ネットワーク構築シミュレータのアイコン">
+      <h1 class="tagline">ネットワーク構築<br>シミュレータ</h1>
+      <p class="lead">新人が L2／L3 のネットワークを、Cisco 風の CLI で「組む → 壊れる → 直す」をくり返して学ぶ演習ソフトです。無償で、インストール不要。Windows と Mac で使えます。</p>
       <ul class="chips platforms" aria-label="対応している端末">
         <li class="chip">Windows</li>
         <li class="chip">Mac</li>
       </ul>
+      <div class="hero-actions"><a class="btn" href="#download">ダウンロード</a></div>
     </div>
-    <div class="shots shots-soon">
-      <div class="shot-soon">画面イメージは準備中です</div>
+    <div class="lp-shot">
+      <img src="assets/shot-1.jpg" width="1600" height="646" alt="DHCP でアドレスを配る課題の画面。左に構成図、右に PC のコマンド画面で ipconfig /all の結果が表示されている">
     </div>
   </section>
 
-  <section id="features" class="band-white" aria-labelledby="features-title">
+  <section id="news" class="band-white" aria-labelledby="news-title">
     <div class="wrap lp-section">
-      <h2 id="features-title" class="section-title">できること</h2>
-      <div class="price-grid">
-        <div class="price-card">
-          <p class="label">課題モード</p>
-          <p>課題 1〜16 と 5.5。組む → 採点 → 壊れる → ヒントを見て直す。</p>
-        </div>
-        <div class="price-card">
-          <p class="label">自由構成モード</p>
-        </div>
+      <h2 id="news-title" class="section-title">お知らせ</h2>
+      <p class="body-text"><strong>1.0.0 を公開しました（2026-11-20）</strong>。最初の正式版です。</p>
+      <ul class="spec-list">
+        <li>正式名を「ネットワーク構築シミュレータ」に決めました。</li>
+        <li>アプリのアイコンを新しくしました（端末の窓に「SW1#」とカーソル）。</li>
+        <li>画面のデザインを一新しました（機器管理コンソール風）。</li>
+        <li>同梱の README に「前の版から更新するとき」を加えました。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="features" class="wrap lp-section" aria-labelledby="features-title">
+    <h2 id="features-title" class="section-title">できること</h2>
+    <div class="price-grid cols-2">
+      <div class="price-card">
+        <p class="label">課題モード</p>
+        <p>全 17 本の課題を順に解きます。流れは「組む → 採点 → 障害が起きる → 原因を調べて直す → 再採点」。ヒントは 3 段階で、見ないほど★が多くなります。課題ごとに、ひとりで読み進められる解説が付きます（別ウィンドウでも開けます）。</p>
       </div>
+      <div class="price-card">
+        <p class="label">自由構成モード</p>
+        <p>機器を自由に置いて、好きな構成を組めます（最大 50 台）。保存と読み込みができます。「届かない原因」を診断するヒント機能も付いています。</p>
+      </div>
+      <div class="price-card">
+        <p class="label">本物らしい機器と CLI</p>
+        <p>機器は実機の前面に近い絵で描きます（RJ45 の口・SFP+・リンクランプ）。PC は Windows 風のコマンド（ipconfig・ping・tracert・nslookup・ssh・telnet）、スイッチとルータは Cisco 風の CLI（? ヘルプ・show・パイプ・複数行の貼り付け・設定の書き出しと読み込み）です。</p>
+      </div>
+      <div class="price-card">
+        <p class="label">中が見える</p>
+        <p>パケットのステップ実行（ヘッダの変化と、機器ごとの判断）、アドレス一覧、キャプチャ。障害試験では、ケーブルを抜く・電源を落とすなどを当て、通信が止まった秒数と理由を測れます。画面はライト・ダーク・システムの設定に合わせます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens" class="band-white" aria-labelledby="screens-title">
+    <div class="wrap lp-section">
+      <h2 id="screens-title" class="section-title">スクリーンイメージ</h2>
+      <div class="shot-grid">
+        <figure class="shot-fig">
+          <a href="assets/shot-2.jpg"><img src="assets/shot-2.jpg" width="1600" height="1000" loading="lazy" alt="最初の課題の画面。スイッチの CLI で show vlan を実行し、VLAN の一覧が表示されている"></a>
+          <figcaption>スイッチの CLI。show vlan などの確認コマンドが使えます。</figcaption>
+        </figure>
+        <figure class="shot-fig">
+          <a href="assets/shot-3.jpg"><img src="assets/shot-3.jpg" width="1600" height="1300" loading="lazy" alt="パケットのステップ実行の画面。ヘッダの変化と、機器ごとの判断のログが表示されている"></a>
+          <figcaption>パケットのステップ実行。ヘッダの変化と、機器ごとの判断を追えます。</figcaption>
+        </figure>
+        <figure class="shot-fig">
+          <a href="assets/shot-4.jpg"><img src="assets/shot-4.jpg" width="1600" height="1000" loading="lazy" alt="総仕上げの課題の画面。要件定義書を読みながら、4 拠点のネットワークを組んでいく"></a>
+          <figcaption>総仕上げの課題。要件定義書を読んで 4 拠点を組みます。</figcaption>
+        </figure>
+        <figure class="shot-fig">
+          <a href="assets/shot-5.jpg"><img src="assets/shot-5.jpg" width="1600" height="1000" loading="lazy" alt="自由構成モードのダーク表示の画面。機器を置いてケーブルをつないでいる"></a>
+          <figcaption>自由構成モード（ダーク表示）。機器を置いて、自由に配線できます。</figcaption>
+        </figure>
+        <figure class="shot-fig">
+          <a href="assets/shot-6.jpg"><img src="assets/shot-6.jpg" width="1600" height="1000" loading="lazy" alt="OSPF で拠点をつなぐ課題の画面。障害試験の結果が表示されている"></a>
+          <figcaption>OSPF の課題と障害試験。通信が止まった時間と理由を測ります。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="topics" class="wrap lp-section" aria-labelledby="topics-title">
+    <h2 id="topics-title" class="section-title">学べること</h2>
+    <p class="body-text">全 17 本の課題で、次のテーマを順に学びます。</p>
+    <ul class="chips topics" aria-label="学べるテーマ">
+      <li class="chip">VLAN</li>
+      <li class="chip">トランク</li>
+      <li class="chip">VLAN 間ルーティング</li>
+      <li class="chip">スタティックルート</li>
+      <li class="chip">STP</li>
+      <li class="chip">DHCP</li>
+      <li class="chip">VRRP</li>
+      <li class="chip">ACL</li>
+      <li class="chip">NAT</li>
+      <li class="chip">OSPF</li>
+      <li class="chip">BGP</li>
+      <li class="chip">管理アクセス</li>
+      <li class="chip">ゾーンベース FW</li>
+      <li class="chip">総仕上げ 2 本</li>
+    </ul>
+    <p class="body-text" style="margin-top:16px">総仕上げの 2 本は、要件定義書を読み、機器を足しながら 4 拠点のネットワークを一から作ります。</p>
+  </section>
+
+  <section id="devices" class="band-white" aria-labelledby="devices-title">
+    <div class="wrap lp-section">
+      <h2 id="devices-title" class="section-title">扱える機器</h2>
+      <ul class="spec-list">
+        <li>PC</li>
+        <li>ハブ</li>
+        <li>L2 スイッチ（L2-24T4X）</li>
+        <li>L3 スイッチ（L3-24T6X）</li>
+        <li>ルータ（RT-8T2X）</li>
+        <li>サーバ（SV-1U：DHCP・Web・NTP・DNS・SNMP 監視）</li>
+        <li>ISP（インターネット回線）</li>
+        <li>広域イーサ（WAN-8G）</li>
+      </ul>
     </div>
   </section>
 
   <section id="audience" class="wrap lp-section" aria-labelledby="audience-title">
     <h2 id="audience-title" class="section-title">対象の人</h2>
-    <p class="body-text">新人（L2／L3 のネットワークを CLI で設定して学びたい人）。</p>
+    <ul class="spec-list">
+      <li>ネットワークの仕事に就いたばかりの新人、L2／L3 を手を動かして学びたい人</li>
+      <li>社内研修の教材として使いたい人（会社の研修での利用も無償です）</li>
+    </ul>
   </section>
 
   <section id="download" class="band-white" aria-labelledby="download-title">
     <div class="wrap lp-section">
       <h2 id="download-title" class="section-title">ダウンロード</h2>
       <div class="dl-buttons">
-        <a class="btn" href="https://github.com/mayudama-factory/network-sim-dist/releases/latest/download/network-sim-windows.zip">Windows 版をダウンロード</a>
-        <a class="btn" href="https://github.com/mayudama-factory/network-sim-dist/releases/latest/download/network-sim-macos.zip">Mac 版をダウンロード</a>
+        <div class="dl-item">
+          <a class="btn" href="https://github.com/mayudama-factory/network-sim-dist/releases/latest/download/network-sim-windows.zip">Windows 版をダウンロード</a>
+          <p class="dl-size">約 14 MB</p>
+        </div>
+        <div class="dl-item">
+          <a class="btn" href="https://github.com/mayudama-factory/network-sim-dist/releases/latest/download/network-sim-macos.zip">Mac 版をダウンロード</a>
+          <p class="dl-size">約 22 MB</p>
+        </div>
       </div>
-      <p class="dl-note" id="release-info">版 0.5.0（2026-11-18 公開）</p>
+      <p class="dl-note" id="release-info">版 1.0.0（2026-11-20 公開）</p>
       <p class="dl-note"><a href="https://github.com/mayudama-factory/network-sim-dist/releases">リリース一覧</a></p>
     </div>
   </section>
@@ -99,14 +199,32 @@
   <section id="howto" class="band-white" aria-labelledby="howto-title">
     <div class="wrap lp-section">
       <h2 id="howto-title" class="section-title">使い方と初回の警告</h2>
-      <p class="body-text">zip を展開し、Windows は network_sim.exe、Mac は network_sim.app を起動します。インストールは不要です。</p>
-      <p class="body-text">このソフトには電子署名（Windows）・Apple の公証（Mac）がないため、初回起動時に警告が出ることがあります。</p>
+      <p class="body-text">zip を<strong>展開してから</strong>、Windows は network_sim.exe、Mac は network_sim.app を起動します。zip の中を開いただけでは起動しません。インストールは不要です。</p>
+      <p class="body-text">このソフトには電子署名（Windows）・Apple の公証（Mac）がないため、初回起動時に警告が出ます。</p>
       <ul class="spec-list">
-        <li>Windows：SmartScreen の「詳細情報」→「実行」</li>
-        <li>Mac：「プライバシーとセキュリティ」の「このまま開く」。または Control キーを押しながら開く</li>
+        <li>Windows：SmartScreen の画面で「詳細情報」→「実行」を選びます。</li>
+        <li>Windows 11 の一部の PC では、「スマート アプリ コントロール」がブロックします。その PC では起動できません。回避はしないでください。</li>
+        <li>Mac：開き方は macOS の版で違います。同梱の README.txt を見てください。</li>
       </ul>
-      <p class="body-text" style="margin-top:16px">詳しい手順は、zip の中の README.txt を見てください。</p>
+      <p class="body-text" style="margin-top:16px">会社の PC でセキュリティ製品が止める場合は、無理に回避せず、IT 部門に相談してください。</p>
+      <h3 class="sub-title">前の版から更新するとき</h3>
+      <ul class="spec-list">
+        <li>Mac：学習の記録は自動で引き継がれます。</li>
+        <li>Windows：記録のファイル（progress.json・layout.json・saves・course_saves）を新しいフォルダへコピーするか、前の版の上に上書きして展開します。詳しくは同梱の README.txt を見てください。</li>
+      </ul>
     </div>
+  </section>
+
+  <section id="roadmap" class="wrap lp-section" aria-labelledby="roadmap-title">
+    <h2 id="roadmap-title" class="section-title">今後の予定</h2>
+    <p class="body-text">次の版（1.1.0）で、次の内容を予定しています。時期は未定です。</p>
+    <ul class="spec-list">
+      <li>LACP（EtherChannel）</li>
+      <li>スイッチのスタッキング</li>
+      <li>拠点間 VPN（GRE・GRE over IPsec）</li>
+      <li>OSPF の改良</li>
+      <li>使い勝手の改善</li>
+    </ul>
   </section>
 
   <section id="terms" class="wrap lp-section" aria-labelledby="terms-title">

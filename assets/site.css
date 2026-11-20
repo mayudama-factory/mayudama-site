@@ -204,3 +204,21 @@ main.doc > footer a { color: var(--ink); }
 .fine a, .lp-section p a { color: var(--accent); }
 .lp-section .body-text { margin: 0 0 16px; font-size: 15px; color: var(--sub); max-width: 720px; }
 .lp-section .body-text:last-child { margin-bottom: 0; }
+
+/* ---------- network-sim 1.0.0：紹介ページの部品（新しいクラスだけ） ---------- */
+.ns-icon { display: block; width: 64px; height: 64px; border-radius: 16px; margin: 0 0 20px; }
+.lp-shot { flex: 1 1 100%; min-width: 0; }
+.lp-shot img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); background: var(--white); }
+.shot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+.shot-fig { margin: 0; }
+.shot-fig a { display: block; line-height: 0; }
+.shot-fig img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: var(--white); }
+.shot-fig figcaption { margin-top: 10px; font-size: 14px; color: var(--sub); line-height: 1.6; }
+@media (max-width: 680px) { .shot-grid { grid-template-columns: 1fr; } }
+.chips.topics { gap: 8px; }
+.chips.topics .chip { font-size: 14px; padding: 4px 14px; }
+.dl-item { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.dl-size { margin: 0; font-size: 13px; color: var(--quiet); padding-left: 24px; }
+.lp-section .sub-title { margin: 32px 0 12px; font-size: 18px; font-weight: 700; }
+.price-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 680px) { .price-grid.cols-2 { grid-template-columns: 1fr; } }
