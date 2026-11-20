@@ -95,6 +95,7 @@ a:hover { text-decoration-thickness: 2px; }
 .app-card { background: var(--white); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; gap: 18px; }
 .app-card.sukidane { --c: var(--suki); --c-soft: var(--suki-soft); }
 .app-card.nfk      { --c: var(--nfk);  --c-soft: var(--nfk-soft); }
+.app-card.netsim   { --c: var(--netsim); --c-soft: var(--netsim-soft); }
 .app-icon { width: 72px; height: 72px; border-radius: 18px; flex: none; }
 .app-icon-link { display: block; align-self: flex-start; width: 72px; height: 72px; border-radius: 18px; }
 .app-icon-link .app-icon { display: block; }
