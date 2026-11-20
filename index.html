@@ -26,7 +26,7 @@
 <!--
   デザインは案A「工房のノート」。見た目は /assets/site.css にまとめてある（このページに <style> は置かない）。
   アプリを足すときは、.app-card を 1 枚コピーして、class（sukidane / nfk / netsim の色）とリンクを直す。
-  対応状況のラベル：公開中は <li class="chip">iOS</li>、準備中は <li class="chip soon">Android 準備中</li>。
+  対応状況のラベル：公開中は <li class="chip">iOS</li>、準備中は <li class="chip soon">Mac 準備中</li>。
 -->
 </head>
 <body>
@@ -87,10 +87,10 @@
         <a class="app-icon-link" href="network-field-kit/" tabindex="-1" aria-hidden="true"><img class="app-icon" src="network-field-kit/icon.png" width="72" height="72" alt=""></a>
         <div>
           <h3>Network Field Kit</h3>
-          <p class="desc">iPhone・iPad 向けのネットワーク診断アプリ。Ping、DNS、速度測定、LAN 探索などを現場で。</p>
+          <p class="desc">iPhone・iPad・Android 向けのネットワーク診断アプリ。Ping、DNS、速度測定、LAN 探索などを現場で。</p>
           <ul class="chips" aria-label="対応している端末">
             <li class="chip">iOS</li>
-            <li class="chip soon">Android 準備中</li>
+            <li class="chip">Android</li>
           </ul>
         </div>
         <div class="app-card-links">
@@ -102,7 +102,7 @@
       <article class="app-card netsim">
         <a class="app-icon-link" href="network-sim/" tabindex="-1" aria-hidden="true"><img class="app-icon" src="network-sim/icon.png" width="72" height="72" alt=""></a>
         <div>
-          <h3>ネットワーク構築シミュレータ</h3>
+          <h3 class="title-keep">ネットワーク<wbr>構築<wbr>シミュレータ</h3>
           <p class="desc">新人が L2／L3 のネットワークを、Cisco 風の CLI で組んで・壊して・直して学ぶ演習ソフト。無償。</p>
           <ul class="chips" aria-label="対応している端末">
             <li class="chip">Windows</li>
