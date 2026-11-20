@@ -10,11 +10,13 @@
   dlg.setAttribute('aria-label', '画像の拡大表示');
   dlg.innerHTML =
     '<div class="lb-stage">' +
-    '<button type="button" class="lb-btn lb-close" aria-label="閉じる">×</button>' +
-    '<button type="button" class="lb-btn lb-prev" aria-label="前の画像">‹</button>' +
     '<img class="lb-img" alt="">' +
     '<p class="lb-cap"></p>' +
-    '<button type="button" class="lb-btn lb-next" aria-label="次の画像">›</button>' +
+    '<div class="lb-bar">' +
+    '<button type="button" class="lb-btn lb-close" aria-label="閉じる">\u00d7</button>' +
+    '<button type="button" class="lb-btn lb-prev" aria-label="前の画像">\u2039</button>' +
+    '<button type="button" class="lb-btn lb-next" aria-label="次の画像">\u203a</button>' +
+    '</div>' +
     '</div>';
   document.body.appendChild(dlg);
   var stage = dlg.querySelector('.lb-stage');
