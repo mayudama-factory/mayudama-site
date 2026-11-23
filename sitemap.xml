@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mayudama.app/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mayudama.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mayudama.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mayudama.app/"/>
+  </url>
+  <url>
+    <loc>https://mayudama.app/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mayudama.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mayudama.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mayudama.app/"/>
+  </url>
+  <url>
+    <loc>https://mayudama.app/network-field-kit/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mayudama.app/network-field-kit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mayudama.app/network-field-kit/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mayudama.app/network-field-kit/"/>
+  </url>
+  <url>
+    <loc>https://mayudama.app/network-field-kit/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mayudama.app/network-field-kit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mayudama.app/network-field-kit/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mayudama.app/network-field-kit/"/>
+  </url>
+  <url>
+    <loc>https://mayudama.app/network-field-kit/support/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mayudama.app/network-field-kit/support/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mayudama.app/network-field-kit/en/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mayudama.app/network-field-kit/support/"/>
+  </url>
+  <url>
+    <loc>https://mayudama.app/network-field-kit/en/support/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mayudama.app/network-field-kit/support/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mayudama.app/network-field-kit/en/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mayudama.app/network-field-kit/support/"/>
+  </url>
+  <url>
+    <loc>https://mayudama.app/network-field-kit/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mayudama.app/network-field-kit/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mayudama.app/network-field-kit/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mayudama.app/network-field-kit/privacy/"/>
+  </url>
+  <url>
+    <loc>https://mayudama.app/network-field-kit/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mayudama.app/network-field-kit/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mayudama.app/network-field-kit/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mayudama.app/network-field-kit/privacy/"/>
+  </url>
+  <url>
+    <loc>https://mayudama.app/network-sim/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/routing/privacy/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/media/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/privacy/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/support/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/terms/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/en/media/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/en/privacy/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/en/support/</loc>
+  </url>
+  <url>
+    <loc>https://mayudama.app/sukidane/en/terms/</loc>
+  </url>
+</urlset>
