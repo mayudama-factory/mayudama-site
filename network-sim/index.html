@@ -62,17 +62,15 @@
   <section id="news" class="band-white" aria-labelledby="news-title">
     <div class="wrap lp-section">
       <h2 id="news-title" class="section-title">お知らせ</h2>
-      <p class="body-text"><strong>1.1.0 を公開しました（2026-11-22）</strong>。</p>
+      <p class="body-text"><strong>1.1.1 を公開しました（2026-11-23）</strong>。</p>
       <ul class="spec-list">
-        <li>リンクの束ね（EtherChannel・LACP）に対応しました。</li>
-        <li>スイッチのスタック（2〜4 台を 1 台として扱う）に対応しました。</li>
-        <li>ルータで GRE トンネルと GRE over IPsec が使えるようになりました。</li>
-        <li>OSPF の SPF の間隔を、新しい Cisco IOS XE の既定にしました。回線が切れたあとの経路の切り替えが速くなります。</li>
-        <li>課題を 3 本（LACP・スタック・GRE）追加して全 20 本になりました。課題の番号を、一覧の並びどおりに付け直しました。</li>
-        <li>自由構成モード：保存は 20 件まで。読み込みの一覧から、名前の変更と削除ができます。「名前を付けて保存」と、閉じるときの未保存の確認を追加しました。</li>
-        <li>画面や操作の使い勝手を改善しました。</li>
-        <li>前の版の保存データと課題の記録は、そのまま使えます。</li>
+        <li>課題を学ぶ順に並べ替え、章を整理しました（L2 の基礎／ルーティングと LAN のサービス／外とつなぐ・拠点をつなぐ）。</li>
+        <li>「その他の機能」の章を新しく作り、管理アクセス・ゾーンベース FW・総仕上げ（守りと管理）をまとめました。</li>
+        <li>「管理アクセスを守る」を 2 本に分け、新しい課題「telnet から ssh へ（vty を守る）」を追加しました。全 21 本になりました。</li>
+        <li>解説などの中の課題番号を、課題の題名に直しました。</li>
+        <li>課題画面の上のバーで、題名が途中で切れる不具合を直しました。</li>
       </ul>
+      <p class="body-text" style="margin-top:16px">1.1.0（2026-11-22）：LACP・スタック・GRE と IPsec に対応、課題を 3 本追加</p>
       <p class="body-text" style="margin-top:16px">1.0.0（2026-11-20）：最初の正式版</p>
     </div>
   </section>
@@ -82,7 +80,7 @@
     <div class="price-grid cols-2">
       <div class="price-card">
         <p class="label">課題モード</p>
-        <p>全 20 本の課題を順に解きます。流れは「組む → 採点 → 障害が起きる → 原因を調べて直す → 再採点」。ヒントは 3 段階で、見ないほど★が多くなります。課題ごとに、自分で読み進められる解説が付きます（別ウィンドウでも開けます）。</p>
+        <p>全 21 本の課題を順に解きます。本編 18 本と、その他の機能 3 本があります。流れは「組む → 採点 → 障害が起きる → 原因を調べて直す → 再採点」。ヒントは 3 段階で、見ないほど★が多くなります。課題ごとに、自分で読み進められる解説が付きます（別ウィンドウでも開けます）。</p>
       </div>
       <div class="price-card">
         <p class="label">自由構成モード</p>
@@ -130,7 +128,7 @@
 
   <section id="topics" class="wrap lp-section" aria-labelledby="topics-title">
     <h2 id="topics-title" class="section-title">学べること</h2>
-    <p class="body-text">全 20 本の課題で、次のテーマを順に学びます。</p>
+    <p class="body-text">全 21 本の課題で、次のテーマを順に学びます。</p>
     <ul class="chips topics" aria-label="学べるテーマ">
       <li class="chip">VLAN</li>
       <li class="chip">トランク</li>
@@ -143,6 +141,7 @@
       <li class="chip">NAT</li>
       <li class="chip">OSPF</li>
       <li class="chip">BGP</li>
+      <li class="chip">telnet から ssh へ</li>
       <li class="chip">管理アクセス</li>
       <li class="chip">ゾーンベース FW</li>
       <li class="chip">LACP</li>
@@ -190,7 +189,7 @@
           <p class="dl-size">約 23 MB</p>
         </div>
       </div>
-      <p class="dl-note" id="release-info">版 1.1.0（2026-11-22 公開）</p>
+      <p class="dl-note" id="release-info">版 1.1.1（2026-11-23 公開）</p>
       <p class="dl-note"><a href="https://github.com/mayudama-factory/network-sim-dist/releases">リリース一覧</a></p>
     </div>
   </section>
